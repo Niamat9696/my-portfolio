@@ -1,0 +1,20 @@
+{
+  "sectionLabel": "01 / About",
+  "heading": "Engineering products from idea to production.",
+  "paragraphs": [
+    "I design and build production systems across frontend, backend, databases, integrations, and infrastructure — owning problems from initial requirements through deployment rather than a single layer of the stack.",
+    "My day-to-day work spans product requirements, frontend development, backend architecture, API design, database modeling, authentication, third-party and AI integrations, payments, and cloud deployment.",
+    "I care about the decisions that determine whether a system holds up in production: how it's architected, how it scales, how it's secured, and how it's operated once real users depend on it."
+  ],
+  "summaryPanel": {
+    "title": "Core Focus Areas",
+    "items": [
+      "Product Requirements & Architecture",
+      "API & Backend Design",
+      "Database Design & Optimization",
+      "Authentication & Security",
+      "AI & LLM Integrations",
+      "Cloud Deployment & Production Ops"
+    ]
+  }
+}

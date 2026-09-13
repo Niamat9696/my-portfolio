@@ -1,0 +1,28 @@
+{
+  "sectionLabel": "03 / Experience",
+  "heading": "Experience",
+  "items": [
+    {
+      "id": "1-sol-digital-services",
+      "company": "1 Sol Digital Services",
+      "position": "Full Stack Developer",
+      "startDate": null,
+      "endDate": null,
+      "isCurrent": false,
+      "description": null,
+      "achievements": [],
+      "technologies": []
+    },
+    {
+      "id": "grace-technology",
+      "company": "Grace Technology",
+      "position": "MERN Stack Developer",
+      "startDate": null,
+      "endDate": null,
+      "isCurrent": false,
+      "description": null,
+      "achievements": [],
+      "technologies": []
+    }
+  ]
+}

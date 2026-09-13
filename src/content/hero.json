@@ -1,0 +1,13 @@
+{
+  "greeting": "Hi, I'm Niamat Ullah.",
+  "headline": "I build scalable digital products.",
+  "rotatingWords": [
+    "Scalable Web Applications.",
+    "Backend Systems.",
+    "AI-Powered Products.",
+    "Production APIs."
+  ],
+  "description": "Senior Full-Stack Developer specializing in modern web applications, backend architecture, AI integrations, databases, cloud infrastructure, and production deployments.",
+  "primaryCta": { "label": "View My Work", "href": "#projects" },
+  "secondaryCta": { "label": "Contact Me", "href": "#contact" }
+}

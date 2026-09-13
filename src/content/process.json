@@ -1,0 +1,36 @@
+{
+  "sectionLabel": "05 / Process",
+  "heading": "From idea to production.",
+  "steps": [
+    {
+      "number": "01",
+      "title": "Understand",
+      "description": "Clarify requirements, users, constraints, and business goals."
+    },
+    {
+      "number": "02",
+      "title": "Architect",
+      "description": "Design application architecture, database structure, APIs, security, and integrations."
+    },
+    {
+      "number": "03",
+      "title": "Build",
+      "description": "Develop maintainable frontend and backend systems."
+    },
+    {
+      "number": "04",
+      "title": "Test",
+      "description": "Validate functionality, edge cases, security, and performance."
+    },
+    {
+      "number": "05",
+      "title": "Deploy",
+      "description": "Configure production infrastructure, CI/CD, Nginx, Docker, or cloud hosting."
+    },
+    {
+      "number": "06",
+      "title": "Improve",
+      "description": "Monitor, optimize, fix bottlenecks, and iterate."
+    }
+  ]
+}

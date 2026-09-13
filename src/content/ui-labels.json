@@ -1,0 +1,23 @@
+{
+  "backToTopLabel": "Back to top",
+  "openMenuLabel": "Open navigation menu",
+  "closeMenuLabel": "Close navigation menu",
+  "skipToContentLabel": "Skip to content",
+  "viewCaseStudyLabel": "View Case Study",
+  "liveSiteLabel": "Live Site",
+  "viewOnGithubLabel": "View on GitHub",
+  "backToProjectsLabel": "Back to Projects",
+  "loadingLabel": "Loading",
+  "availableForOpportunitiesLabel": "Available for opportunities",
+  "roleLabel": "Role",
+  "presentLabel": "Present",
+  "overviewLabel": "Overview",
+  "problemLabel": "Problem",
+  "myRoleLabel": "My Role",
+  "architectureLabel": "Architecture / Approach",
+  "keyFeaturesLabel": "Key Features",
+  "technicalChallengesLabel": "Technical Challenges",
+  "solutionsLabel": "Solutions",
+  "resultsImpactLabel": "Results / Impact",
+  "technologyStackLabel": "Technology Stack"
+}

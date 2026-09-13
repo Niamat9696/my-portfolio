@@ -1,0 +1,88 @@
+{
+  "sectionLabel": "04 / Technical Arsenal",
+  "heading": "Technical Arsenal",
+  "groups": [
+    {
+      "id": "frontend",
+      "label": "Frontend",
+      "technologies": [
+        "JavaScript",
+        "TypeScript",
+        "React",
+        "Next.js",
+        "Tailwind CSS",
+        "Material UI",
+        "Responsive UI"
+      ]
+    },
+    {
+      "id": "backend",
+      "label": "Backend",
+      "technologies": [
+        "Node.js",
+        "NestJS",
+        "Express.js",
+        "REST APIs",
+        "WebSockets",
+        "API Architecture"
+      ]
+    },
+    {
+      "id": "databases",
+      "label": "Databases",
+      "technologies": [
+        "MongoDB",
+        "PostgreSQL",
+        "MySQL",
+        "Prisma",
+        "Sequelize",
+        "Mongoose"
+      ]
+    },
+    {
+      "id": "auth-security",
+      "label": "Authentication & Security",
+      "technologies": ["JWT", "OAuth", "Passport.js", "RBAC"]
+    },
+    {
+      "id": "ai",
+      "label": "AI",
+      "technologies": [
+        "LLM Integrations",
+        "AI APIs",
+        "Streaming Responses",
+        "Prompt Handling",
+        "AI Chat Interfaces"
+      ]
+    },
+    {
+      "id": "cloud-devops",
+      "label": "Cloud & DevOps",
+      "technologies": [
+        "AWS",
+        "Docker",
+        "VPS",
+        "Nginx",
+        "Vercel",
+        "cPanel",
+        "CI/CD",
+        "Production Deployment"
+      ]
+    },
+    {
+      "id": "integrations",
+      "label": "Integrations",
+      "technologies": [
+        "Stripe",
+        "Firebase",
+        "Third-Party APIs",
+        "Social Authentication"
+      ]
+    },
+    {
+      "id": "tools",
+      "label": "Tools",
+      "technologies": ["Git", "GitHub", "Postman", "VS Code"]
+    }
+  ]
+}
