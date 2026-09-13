@@ -1,4 +1,12 @@
 {
-  "summary": "Senior Full-Stack Developer with 5+ years of experience designing and building production systems across frontend, backend, databases, integrations, and cloud infrastructure.",
-  "education": []
+  "summary": "Results-driven Full Stack Developer with 5+ years of experience building scalable SaaS platforms, AI-powered web applications, and enterprise-grade systems. Strong expertise in React.js, Next.js, Node.js, Express.js, MongoDB, and SQL databases. Recently worked on AI model integrations and customized Copilot-style chat interfaces using Material UI (MUI). Experienced in designing secure APIs, real-time systems, and performance-optimized cloud deployments.",
+  "education": [
+    {
+      "id": "kust-bscs",
+      "institution": "Kohat University of Science and Technology, Pakistan",
+      "credential": "BS Computer Science",
+      "startDate": null,
+      "endDate": null
+    }
+  ]
 }

@@ -5,10 +5,10 @@
     {
       "slug": "slamsport-ai",
       "title": "SlamSport AI",
-      "category": null,
+      "category": "Sports",
       "shortDescription": null,
       "description": null,
-      "role": null,
+      "role": "Front Developer",
       "image": null,
       "images": [],
       "technologies": [],
@@ -18,14 +18,14 @@
       "keyFeatures": [],
       "challenges": [],
       "results": null,
-      "liveUrl": null,
+      "liveUrl": "https://slamsports.ai/",
       "githubUrl": null,
-      "status": null,
+      "status": "live",
       "featured": true
     },
     {
-      "slug": "black-diamond",
-      "title": "Black Diamond App",
+      "slug": "onlineresumaker",
+      "title": "Online Resume Maker",
       "category": null,
       "shortDescription": null,
       "description": null,
@@ -39,9 +39,9 @@
       "keyFeatures": [],
       "challenges": [],
       "results": null,
-      "liveUrl": null,
+      "liveUrl": "https://onlineresumaker.com/",
       "githubUrl": null,
-      "status": null,
+      "status": "live",
       "featured": true
     },
     {
@@ -60,9 +60,9 @@
       "keyFeatures": [],
       "challenges": [],
       "results": null,
-      "liveUrl": null,
+      "liveUrl": "https://vitasoftware.de/",
       "githubUrl": null,
-      "status": null,
+      "status": "live",
       "featured": true
     },
     {
@@ -81,9 +81,9 @@
       "keyFeatures": [],
       "challenges": [],
       "results": null,
-      "liveUrl": null,
+      "liveUrl": "https://paythedebtcoin.com/",
       "githubUrl": null,
-      "status": null,
+      "status": "live",
       "featured": true
     },
     {
@@ -102,14 +102,14 @@
       "keyFeatures": [],
       "challenges": [],
       "results": null,
-      "liveUrl": null,
+      "liveUrl": "https://mettaswap.com/",
       "githubUrl": null,
-      "status": null,
+      "status": "live",
       "featured": true
     },
     {
-      "slug": "book-library-system",
-      "title": "Book Library System",
+      "slug": "delivery-fleet-system",
+      "title": "Delivery Fleet",
       "category": null,
       "shortDescription": null,
       "description": null,
@@ -123,9 +123,9 @@
       "keyFeatures": [],
       "challenges": [],
       "results": null,
-      "liveUrl": null,
+      "liveUrl": "https://vgasoftwares.com/delivery-fleet-dev/",
       "githubUrl": null,
-      "status": null,
+      "status": "live",
       "featured": true
     }
   ]

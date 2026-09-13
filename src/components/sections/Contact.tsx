@@ -6,6 +6,7 @@ import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { Toast } from "@/components/ui/Toast";
 import { GithubIcon, LinkedinIcon } from "@/components/ui/BrandIcons";
+import { toGmailComposeUrl } from "@/lib/email";
 import type { ContactContent, PersonalInfo, SocialLink } from "@/types";
 
 interface ContactProps {
@@ -45,7 +46,7 @@ export function Contact({ contact, personal, socialLinks }: ContactProps) {
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             {personal.email && (
               <>
-                <Button href={`mailto:${personal.email}`} variant="primary">
+                <Button href={toGmailComposeUrl(personal.email)} variant="primary" external>
                   {contact.ctaLabel}
                 </Button>
                 <Button variant="secondary" onClick={handleCopyEmail}>
@@ -64,9 +65,9 @@ export function Contact({ contact, personal, socialLinks }: ContactProps) {
               return (
                 <a
                   key={link.platform}
-                  href={link.url}
-                  target={isMail ? undefined : "_blank"}
-                  rel={isMail ? undefined : "noopener noreferrer"}
+                  href={isMail ? toGmailComposeUrl(link.url) : link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label={link.ariaLabel}
                   className="text-foreground-secondary transition-all duration-200 hover:scale-105 hover:text-primary"
                 >

@@ -1,5 +1,6 @@
 import { getConfiguredSocialLinks, getFooter, getPersonalInfo } from "@/lib/content";
 import { SocialIcon } from "@/components/ui/SocialIcon";
+import { toGmailComposeUrl } from "@/lib/email";
 
 export function Footer() {
   const footer = getFooter();
@@ -14,7 +15,7 @@ export function Footer() {
           {socialLinks.map((link) => (
             <a
               key={link.platform}
-              href={link.url}
+              href={link.url.startsWith("mailto:") ? toGmailComposeUrl(link.url) : link.url}
               target="_blank"
               rel="noopener noreferrer"
               aria-label={link.ariaLabel}

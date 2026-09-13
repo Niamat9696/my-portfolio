@@ -6,6 +6,7 @@ import { Mail } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { GithubIcon, LinkedinIcon } from "@/components/ui/BrandIcons";
+import { toGmailComposeUrl } from "@/lib/email";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 import type { HeroContent, PersonalInfo, SocialLink, UiLabels } from "@/types";
 
@@ -99,9 +100,9 @@ export function Hero({ hero, personal, socialLinks, uiLabels }: HeroProps) {
             return (
               <a
                 key={link.platform}
-                href={link.url}
-                target={isMail ? undefined : "_blank"}
-                rel={isMail ? undefined : "noopener noreferrer"}
+                href={isMail ? toGmailComposeUrl(link.url) : link.url}
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label={link.ariaLabel}
                 className="text-foreground-secondary transition-all duration-200 hover:scale-105 hover:text-primary"
               >

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { SocialIcon } from "@/components/ui/SocialIcon";
+import { toGmailComposeUrl } from "@/lib/email";
 import { useActiveSection } from "@/hooks/useActiveSection";
 import { useScrolled } from "@/hooks/useScrolled";
 import type { NavigationContent, SocialLink, UiLabels } from "@/types";
@@ -74,7 +75,7 @@ export function Navbar({ navigation, socialLinks, uiLabels }: NavbarProps) {
             link.url ? (
               <a
                 key={link.platform}
-                href={link.url}
+                href={link.url.startsWith("mailto:") ? toGmailComposeUrl(link.url) : link.url}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={link.ariaLabel}
@@ -146,7 +147,7 @@ export function Navbar({ navigation, socialLinks, uiLabels }: NavbarProps) {
             link.url ? (
               <a
                 key={link.platform}
-                href={link.url}
+                href={link.url.startsWith("mailto:") ? toGmailComposeUrl(link.url) : link.url}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={link.ariaLabel}
