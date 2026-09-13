@@ -2,6 +2,7 @@ import { ImageResponse } from "next/og";
 import { getPersonalInfo } from "@/lib/content";
 import { SITE_TAGLINE } from "@/constants/site";
 
+export const dynamic = "force-static";
 export const alt = "Niamat Ullah — Senior Full-Stack Developer";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
