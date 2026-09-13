@@ -17,7 +17,7 @@ interface ProjectCardProps {
 export function ProjectCard({ project, reverse, uiLabels }: ProjectCardProps) {
   const media = (
     <div
-      className={`relative aspect-16/10 overflow-hidden rounded-xl border border-border transition-all duration-300 group-hover:-translate-y-1 group-hover:border-primary/40 group-hover:shadow-lg group-hover:shadow-primary/10 ${
+      className={`relative aspect-16/10 overflow-hidden rounded-xl border border-border bg-background-secondary transition-all duration-300 group-hover:-translate-y-1 group-hover:border-primary/40 group-hover:shadow-lg group-hover:shadow-primary/10 ${
         reverse ? "lg:order-2" : "lg:order-1"
       }`}
     >
@@ -27,7 +27,7 @@ export function ProjectCard({ project, reverse, uiLabels }: ProjectCardProps) {
           alt={project.image.alt}
           fill
           sizes="(min-width: 1024px) 50vw, 100vw"
-          className="object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+          className="object-contain transition-transform duration-300 group-hover:scale-[1.03]"
         />
       ) : (
         <ProjectImagePlaceholder title={project.title} />

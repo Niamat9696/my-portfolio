@@ -121,14 +121,14 @@ export default async function ProjectCaseStudyPage({
           </div>
         </header>
 
-        <div className="relative mt-10 aspect-16/10 overflow-hidden rounded-xl border border-border">
+        <div className="relative mt-10 aspect-16/10 overflow-hidden rounded-xl border border-border bg-background-secondary">
           {gallery.length > 0 ? (
             <Image
               src={gallery[0].src}
               alt={gallery[0].alt}
               fill
               sizes="(min-width: 1024px) 896px, 100vw"
-              className="object-cover"
+              className="object-contain"
               priority
             />
           ) : (
@@ -141,14 +141,14 @@ export default async function ProjectCaseStudyPage({
             {gallery.slice(1).map((image) => (
               <div
                 key={image.src}
-                className="relative aspect-16/10 overflow-hidden rounded-lg border border-border"
+                className="relative aspect-16/10 overflow-hidden rounded-lg border border-border bg-background-secondary"
               >
                 <Image
                   src={image.src}
                   alt={image.alt}
                   fill
                   sizes="(min-width: 640px) 33vw, 50vw"
-                  className="object-cover"
+                  className="object-contain"
                   loading="lazy"
                 />
               </div>
