@@ -11,6 +11,7 @@ import { ProjectImagePlaceholder } from "@/components/projects/ProjectImagePlace
 import { ArchitectureDiagram } from "@/components/projects/ArchitectureDiagram";
 import { getProjectBySlug, getProjectSlugs, getUiLabels } from "@/lib/content";
 import { projectStatusLabels } from "@/constants/project-status";
+import { withBasePath } from "@/lib/base-path";
 
 export function generateStaticParams() {
   return getProjectSlugs().map((slug) => ({ slug }));
@@ -124,7 +125,7 @@ export default async function ProjectCaseStudyPage({
         <div className="relative mt-10 aspect-16/10 overflow-hidden rounded-xl border border-border bg-background-secondary">
           {gallery.length > 0 ? (
             <Image
-              src={gallery[0].src}
+              src={withBasePath(gallery[0].src)}
               alt={gallery[0].alt}
               fill
               sizes="(min-width: 1024px) 896px, 100vw"
@@ -144,7 +145,7 @@ export default async function ProjectCaseStudyPage({
                 className="relative aspect-16/10 overflow-hidden rounded-lg border border-border bg-background-secondary"
               >
                 <Image
-                  src={image.src}
+                  src={withBasePath(image.src)}
                   alt={image.alt}
                   fill
                   sizes="(min-width: 640px) 33vw, 50vw"

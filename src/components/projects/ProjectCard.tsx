@@ -6,6 +6,7 @@ import { Container } from "@/components/ui/Container";
 import { TechPill } from "@/components/ui/TechPill";
 import { ProjectImagePlaceholder } from "./ProjectImagePlaceholder";
 import { projectStatusLabels } from "@/constants/project-status";
+import { withBasePath } from "@/lib/base-path";
 import type { Project, UiLabels } from "@/types";
 
 interface ProjectCardProps {
@@ -23,7 +24,7 @@ export function ProjectCard({ project, reverse, uiLabels }: ProjectCardProps) {
     >
       {project.image ? (
         <Image
-          src={project.image.src}
+          src={withBasePath(project.image.src)}
           alt={project.image.alt}
           fill
           sizes="(min-width: 1024px) 50vw, 100vw"
