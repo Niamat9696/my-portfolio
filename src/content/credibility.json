@@ -1,7 +1,7 @@
 {
   "items": [
-    { "label": "Years Experience", "value": "5+" },
-    { "label": "Full-Stack Development", "value": "" },
-    { "label": "Production & Cloud Experience", "value": "" }
+    { "label": "Years Experience", "value": "" },
+    { "label": "Full-Stack Development", "value": "5+" },
+    { "label": "Production & Cloud Experience", "value": "3+" }
   ]
 }
