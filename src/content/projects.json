@@ -10,7 +10,7 @@
       "description": null,
       "role": "Front Developer",
       "image": {
-        "src": "./projects-imgs/slam-sports-ai.png",
+        "src": "/projects-imgs/slam-sports-ai.png",
         "alt": "SlamSport AI dashboard screenshot",
         "width": 1900,
         "height": 906
@@ -36,7 +36,7 @@
       "description": null,
       "role": null,
       "image": {
-        "src": "./projects-imgs/onlineresume.png",
+        "src": "/projects-imgs/onlineresume.png",
         "alt": "Online Resume Maker screenshot",
         "width": 1745,
         "height": 648
@@ -62,7 +62,7 @@
       "description": null,
       "role": null,
       "image": {
-        "src": "./projects-imgs/vitasoftware.png",
+        "src": "/projects-imgs/vitasoftware.png",
         "alt": "Vitasoftware SaaS platform screenshot",
         "width": 1903,
         "height": 917
@@ -88,7 +88,7 @@
       "description": null,
       "role": null,
       "image": {
-        "src": "./projects-imgs/paythdeptcoin.png",
+        "src": "/projects-imgs/paythdeptcoin.png",
         "alt": "Pay the Debt Coin platform screenshot",
         "width": 1903,
         "height": 864
@@ -114,7 +114,7 @@
       "description": null,
       "role": null,
       "image": {
-        "src": "./projects-imgs/swap-token.png",
+        "src": "/projects-imgs/swap-token.png",
         "alt": "Mettaswap decentralized app screenshot",
         "width": 1898,
         "height": 915
@@ -140,7 +140,7 @@
       "description": null,
       "role": null,
       "image": {
-        "src": "./projects-imgs/delivery-fleet.png",
+        "src": "/projects-imgs/delivery-fleet.png",
         "alt": "Delivery Fleet management system screenshot",
         "width": 1914,
         "height": 768
