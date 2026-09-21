@@ -46,7 +46,7 @@ export function Navbar({ navigation, socialLinks, uiLabels }: NavbarProps) {
       }`}
     >
       <nav className="mx-auto flex h-16 max-w-350 items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link href="#" className="font-mono text-lg font-semibold text-foreground">
+        <Link href="/" className="font-mono text-lg font-semibold text-foreground">
           {navigation.brand}
         </Link>
 
@@ -56,15 +56,15 @@ export function Navbar({ navigation, socialLinks, uiLabels }: NavbarProps) {
             const isActive = activeId === id;
             return (
               <li key={link.href}>
-                <a
-                  href={link.href}
+                <Link
+                  href={`/${link.href}`}
                   aria-current={isActive ? "true" : undefined}
                   className={`relative text-sm transition-colors duration-200 after:absolute after:-bottom-1 after:left-0 after:h-px after:w-full after:origin-left after:scale-x-0 after:bg-primary after:transition-transform after:duration-200 hover:text-foreground hover:after:scale-x-100 ${
                     isActive ? "text-foreground after:scale-x-100" : "text-foreground-secondary"
                   }`}
                 >
                   {link.label}
-                </a>
+                </Link>
               </li>
             );
           })}
@@ -125,13 +125,13 @@ export function Navbar({ navigation, socialLinks, uiLabels }: NavbarProps) {
         <ul className="flex flex-col gap-1 px-6 pt-6">
           {navigation.links.map((link) => (
             <li key={link.href}>
-              <a
-                href={link.href}
+              <Link
+                href={`/${link.href}`}
                 onClick={() => setMenuOpen(false)}
                 className="block py-3 text-lg text-foreground-secondary transition-colors duration-200 hover:text-foreground"
               >
                 {link.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
