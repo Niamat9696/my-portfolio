@@ -8,7 +8,7 @@ interface ContainerProps {
 /** Centered content container, max-w-7xl (1280px) per the design system. */
 export function Container({ children, className = "" }: ContainerProps) {
   return (
-    <div className={`mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 ${className}`.trim()}>
+    <div className={`mx-auto w-full max-w-350 px-4 sm:px-6 lg:px-8 ${className}`.trim()}>
       {children}
     </div>
   );

@@ -45,7 +45,7 @@ export function Navbar({ navigation, socialLinks, uiLabels }: NavbarProps) {
           : "border-b border-transparent bg-transparent"
       }`}
     >
-      <nav className="mx-auto flex h-16 max-w-[1280px] items-center justify-between px-4 sm:px-6 lg:px-8">
+      <nav className="mx-auto flex h-16 max-w-350 items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="#" className="font-mono text-lg font-semibold text-foreground">
           {navigation.brand}
         </Link>

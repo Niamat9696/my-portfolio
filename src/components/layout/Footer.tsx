@@ -10,7 +10,7 @@ export function Footer() {
 
   return (
     <footer className="border-t border-border">
-      <div className="mx-auto flex max-w-[1280px] flex-col items-center gap-4 px-4 py-10 text-center sm:px-6 lg:px-8">
+      <div className="mx-auto flex max-w-350 flex-col items-center gap-4 px-4 py-10 text-center sm:px-6 lg:px-8">
         <div className="flex items-center gap-4">
           {socialLinks.map((link) => (
             <a
