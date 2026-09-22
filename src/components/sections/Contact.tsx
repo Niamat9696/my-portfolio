@@ -31,7 +31,9 @@ export function Contact({ contact, personal, socialLinks }: ContactProps) {
     <section id="contact" className="scroll-mt-24 py-24">
       <Container>
         <div className="mx-auto max-w-2xl text-center">
-          <p className="font-mono text-sm tracking-wide text-primary">{contact.sectionLabel}</p>
+          <p className="text-gradient-brand font-mono text-sm font-semibold tracking-wide">
+            {contact.sectionLabel}
+          </p>
           <h2 className="mt-3 whitespace-pre-line text-[clamp(1.75rem,1.35rem+2vw,3rem)] font-semibold leading-tight tracking-tight text-foreground">
             {contact.heading}
           </h2>
@@ -69,7 +71,7 @@ export function Contact({ contact, personal, socialLinks }: ContactProps) {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={link.ariaLabel}
-                  className="text-foreground-secondary transition-all duration-200 hover:scale-105 hover:text-primary"
+                  className="text-foreground-secondary transition-all duration-200 hover:scale-105 hover:text-accent"
                 >
                   <Icon className="h-5 w-5" aria-hidden="true" />
                 </a>

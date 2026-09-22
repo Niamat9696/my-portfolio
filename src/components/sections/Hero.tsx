@@ -57,7 +57,7 @@ export function Hero({ hero, personal, socialLinks, uiLabels }: HeroProps) {
 
         <motion.div variants={child} className="mt-4 h-9 overflow-hidden sm:h-10">
           {prefersReducedMotion ? (
-            <span className="font-mono text-lg text-primary sm:text-xl">
+            <span className="text-gradient-brand font-mono text-lg font-semibold sm:text-xl">
               {hero.rotatingWords[0]}
             </span>
           ) : (
@@ -68,7 +68,7 @@ export function Hero({ hero, personal, socialLinks, uiLabels }: HeroProps) {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -12 }}
                 transition={{ duration: 0.4, ease: "easeOut" }}
-                className="block font-mono text-lg text-primary sm:text-xl"
+                className="text-gradient-brand block font-mono text-lg font-semibold sm:text-xl"
               >
                 {hero.rotatingWords[wordIndex]}
               </motion.span>
@@ -104,7 +104,7 @@ export function Hero({ hero, personal, socialLinks, uiLabels }: HeroProps) {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={link.ariaLabel}
-                className="text-foreground-secondary transition-all duration-200 hover:scale-105 hover:text-primary"
+                className="text-foreground-secondary transition-all duration-200 hover:scale-105 hover:text-accent"
               >
                 <Icon className="h-5 w-5" aria-hidden="true" />
               </a>

@@ -11,9 +11,9 @@ const baseClasses =
 
 const variantClasses: Record<ButtonVariant, string> = {
   primary:
-    "bg-primary text-white px-5 py-2.5 text-sm hover:bg-primary-light hover:-translate-y-px hover:shadow-lg hover:shadow-primary/20",
+    "bg-linear-to-r from-violet via-primary to-accent text-white px-5 py-2.5 text-sm bg-size-[200%_100%] bg-left hover:bg-right hover:-translate-y-px hover:shadow-lg hover:shadow-accent/25",
   secondary:
-    "bg-transparent text-foreground px-5 py-2.5 text-sm border border-border hover:border-primary/60 hover:bg-white/[0.03] hover:-translate-y-px",
+    "bg-transparent text-foreground px-5 py-2.5 text-sm border border-border hover:border-accent/60 hover:bg-white/[0.03] hover:-translate-y-px",
   ghost:
     "bg-transparent text-foreground-secondary px-3 py-2 text-sm hover:text-foreground hover:bg-white/[0.03]",
   icon: "bg-transparent text-foreground-secondary p-2 hover:text-foreground hover:bg-white/[0.03] hover:scale-105",

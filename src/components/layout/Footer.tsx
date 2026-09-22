@@ -19,7 +19,7 @@ export function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={link.ariaLabel}
-              className="text-foreground-secondary transition-all duration-200 hover:scale-105 hover:text-primary"
+              className="text-foreground-secondary transition-all duration-200 hover:scale-105 hover:text-accent"
             >
               <SocialIcon icon={link.icon} className="h-5 w-5" />
             </a>

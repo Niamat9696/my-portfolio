@@ -1,5 +1,5 @@
 {
-  "brand": "Niamat.",
+  "brand": "./Logo.png",
   "links": [
     { "label": "About", "href": "#about" },
     { "label": "Experience", "href": "#experience" },
