@@ -1,12 +1,121 @@
 {
-  "summary": "Results-driven Full Stack Developer with 5+ years of experience building scalable SaaS platforms, AI-powered web applications, and enterprise-grade systems. Strong expertise in React.js, Next.js, Node.js, Express.js, MongoDB, and SQL databases. Recently worked on AI model integrations and customized Copilot-style chat interfaces using Material UI (MUI). Experienced in designing secure APIs, real-time systems, and performance-optimized cloud deployments.",
+  "headline": "NestJS • React • Next.js • TypeScript • PostgreSQL • MongoDB",
+  "availability": "Open to Remote",
+  "portfolioUrl": "https://niamat9696.github.io/my-portfolio/",
+  "summary": "Full-stack developer with **5+ years** of experience shipping production SaaS platforms, enterprise ERP systems, multi-sided marketplaces, and AI-powered features end to end — from database design and secure APIs to polished dashboards, mobile-app backends, and Linux deployments. Specialist in **NestJS, React/Next.js, TypeScript, PostgreSQL and MongoDB**, with deep hands-on experience in **multi-tenant architecture, RBAC, JWT/OAuth authentication**, payments, and LLM integrations. Progressed from developer to **Team Lead and Director**, and has delivered 10+ projects across the full lifecycle. An **AI-augmented engineer** who uses Claude Code and Claude.ai daily — with custom-built skills and project context — to write, review, and test code faster while keeping quality high. Has shipped multiple platforms that are **live in production today**, spanning admin, vendor, logistics, teacher, driver, and customer apps.",
+  "skills": [
+    { "label": "Frontend", "text": "React.js, Next.js, TypeScript, JavaScript (ES6+), Tailwind CSS, Material UI (MUI), Context API, responsive and component-driven UI" },
+    { "label": "Backend", "text": "NestJS, Node.js, Express.js, Laravel, REST API design, WebSockets, background jobs, API performance optimization, unit and integration testing with Jest" },
+    { "label": "Databases & ORM", "text": "PostgreSQL, MongoDB, MySQL, TypeORM, Prisma, Sequelize, Mongoose, schema design, indexing, query optimization" },
+    { "label": "Architecture & Security", "text": "Multi-tenant SaaS, RBAC, JWT, OAuth, Passport.js, data isolation, input validation, secure authentication flows" },
+    { "label": "AI Engineering", "text": "LLM integrations, streaming responses, Copilot-style chat UIs, prompt orchestration, token/usage controls" },
+    { "label": "AI-Assisted Development", "text": "Claude Code, Claude.ai, custom Claude skills, CLAUDE.md project context, MCP tools, AI code review, AI-generated test suites" },
+    { "label": "Integrations", "text": "Stripe, Firebase, email and SMS automation, crypto-wallet and blockchain APIs, third-party REST APIs" },
+    { "label": "Cloud & DevOps", "text": "AWS, Linux, VPS, Nginx, Docker, Vercel, cPanel, CI/CD, domains/SSL, Git, GitHub" }
+  ],
+  "aiEngineering": {
+    "heading": "AI-Augmented Engineering (Claude Code & Claude.ai)",
+    "items": [
+      { "label": "Code generation", "text": "Use Claude Code as an agentic pair programmer to scaffold NestJS modules, TypeORM entities, DTOs, React/Next.js components and API clients, then refine and own every line — cutting time spent on boilerplate so effort goes into architecture and business logic." },
+      { "label": "Custom skills", "text": "Built reusable Claude skills encoding team conventions — NestJS module structure, RBAC/permission checks, multi-tenant query scoping, and API response standards — so generated code is consistent with the codebase from the first draft." },
+      { "label": "Code review", "text": "Run AI-assisted reviews on every change to catch logic bugs, missing tenant isolation, insecure auth paths, N+1 queries, and edge cases before human review and merge." },
+      { "label": "Testing", "text": "Generate and extend unit, integration, and API tests with Jest for NestJS and Express services using Claude, covering validation rules, permission boundaries, and failure paths; use the agent to reproduce, debug, and fix failing tests." },
+      { "label": "Workflow", "text": "Maintain CLAUDE.md project context, connect tools via MCP, and use Claude.ai for system design, schema planning, documentation, and refactoring plans — delivering features faster with fewer regressions." }
+    ]
+  },
+  "experienceHighlights": {
+    "value-growth-advisory": [
+      "Delivered a complete **enterprise ERP and delivery-fleet management platform** (admin dashboard + driver mobile app) from architecture to deployment using NestJS, TypeScript, TypeORM, and PostgreSQL.",
+      "Built a tutor/education application featuring **7 distinct role-based dashboards** on a shared NestJS API.",
+      "Designed **multi-tenant data isolation** at company and branch level, ensuring every query and API action is correctly scoped to the user’s organization.",
+      "Implemented **role-based access control (RBAC)** that keeps dashboard navigation and backend permissions in sync, closing gaps between what users see and what they can execute.",
+      "Own business-critical modules such as **commissions and fleet operations**, with strict validation and data-consistency rules for financial and operational records.",
+      "Use **Claude Code with custom project skills** to generate, review, and test backend modules, accelerating delivery while maintaining code quality and consistent conventions.",
+      "Handle production deployment and configuration on AWS/VPS across Linux, Nginx, domains, and SSL."
+    ],
+    "1-sol-digital-services": [
+      "Led a **complete UI redesign** and new feature enhancements for a sports multi-tenant web application.",
+      "Integrated **LLM-powered features** into production SaaS products, enabling intelligent automation and conversational workflows for end users.",
+      "Built a **Copilot-style chat interface** in React and Material UI with real-time streaming responses and dynamic prompt orchestration.",
+      "Developed secure backend APIs for AI services, including authentication, token management, and **usage limits to control AI cost**.",
+      "Independently developed **two additional production websites** end to end."
+    ],
+    "grace-technology": [
+      "**Promoted from Backend Developer to Team Lead of the Web Department**, owning delivery and technical direction for the team.",
+      "Delivered **3 projects across the full development lifecycle**, from requirements to production.",
+      "Redesigned MongoDB schemas and indexes to speed up slow queries on high-traffic endpoints.",
+      "Integrated **Stripe payments**, email automation, SMS services, and third-party APIs.",
+      "**Mentored junior developers** and led code reviews, raising code quality and team workflow standards."
+    ],
+    "uzair-technology": [
+      "**Progressed from Developer to Backend Team Lead, and ultimately to Director**, taking on technical and organizational leadership.",
+      "Successfully delivered **6+ projects** from planning through deployment.",
+      "Developed full-stack applications with MongoDB, Express.js, React.js, Node.js, and Laravel.",
+      "Built RESTful APIs and backend services with JWT-based authentication and authorization, and optimized database queries and indexes."
+    ]
+  },
+  "projectsHeading": "Selected Projects (Live in Production)",
+  "projects": [
+    {
+      "id": "delivery-fleet",
+      "name": "Delivery Fleet ERP System",
+      "stack": "NestJS, React.js, Tailwind CSS, PostgreSQL",
+      "url": "https://vgasoftwares.com/delivery-fleet-dev/",
+      "description": "Enterprise fleet-management platform with admin dashboard, multi-tenant workflows, and a driver mobile app; company/branch-aware data access across all operations.",
+      "extraLinks": []
+    },
+    {
+      "id": "cube-app",
+      "name": "CUBE APP – Tutors & Education Platform",
+      "stack": "NestJS, React.js, Tailwind CSS, MongoDB",
+      "url": "https://cube-edu.com",
+      "description": "Education ecosystem spanning admin dashboard, teacher dashboard, and student mobile app, powered by a shared NestJS API with distinct role-based experiences.",
+      "extraLinks": []
+    },
+    {
+      "id": "amirni",
+      "name": "AMIRNI – E-commerce & Delivery Platform",
+      "stack": "NestJS, Next.js, Tailwind CSS, MongoDB",
+      "url": "https://amirni.com",
+      "description": "Multi-sided marketplace with admin, vendor, and logistics dashboards plus customer and driver mobile apps — five connected interfaces on one backend.",
+      "extraLinks": [
+        { "label": "Admin", "url": "https://amirni.com/dev/admin/login" },
+        { "label": "Vendor", "url": "https://amirni.com/dev/vendor/login" },
+        { "label": "Logistics", "url": "https://amirni.com/dev/logistics/login" }
+      ]
+    },
+    {
+      "id": "slamsport-ai",
+      "name": "SlamSport AI",
+      "stack": "Next.js, Node.js, Python",
+      "url": "https://slamsports.ai/",
+      "description": "AI-driven sports insights and analytics dashboard with secure authentication, role-based access, and external data-API integrations.",
+      "extraLinks": []
+    },
+    {
+      "id": "pay-the-debt-coin",
+      "name": "Pay the Debt Coin",
+      "stack": "Node.js, Express.js, Next.js",
+      "url": "https://paythedebtcoin.com/",
+      "description": "Crypto platform with JWT authentication and integrations for wallet activity and blockchain transaction data.",
+      "extraLinks": []
+    },
+    {
+      "id": "mettaswap",
+      "name": "Mettaswap",
+      "stack": "Node.js, Express.js, React.js, MongoDB",
+      "url": "https://mettaswap.com/",
+      "description": "Decentralized app with crypto-wallet connections, live token-price updates, and smart-contract interactions.",
+      "extraLinks": []
+    }
+  ],
   "education": [
     {
       "id": "kust-bscs",
       "institution": "Kohat University of Science and Technology, Pakistan",
       "credential": "BS Computer Science",
       "startDate": null,
-      "endDate": null
+      "endDate": "2022-01"
     }
   ]
 }

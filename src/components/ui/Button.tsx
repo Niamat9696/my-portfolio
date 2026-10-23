@@ -45,7 +45,8 @@ export function Button({ variant = "primary", className = "", children, ...props
     const isMailto = href.startsWith("mailto:");
     const isExternal = !isMailto && (external === true || /^https?:\/\//.test(href));
 
-    if (isMailto) {
+    // Mail links and file downloads must not go through client-side routing.
+    if (isMailto || rest.download !== undefined) {
       return (
         <a href={href} className={classes} {...rest}>
           {children}

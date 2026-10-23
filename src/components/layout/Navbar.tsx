@@ -7,6 +7,8 @@ import { AnimatePresence, motion, type Variants } from "motion/react";
 import { Button } from "@/components/ui/Button";
 import { SocialIcon } from "@/components/ui/SocialIcon";
 import { toGmailComposeUrl } from "@/lib/email";
+import { CV_FILENAME, CV_PATH } from "@/constants/site";
+import { withBasePath } from "@/lib/base-path";
 import { useActiveSection } from "@/hooks/useActiveSection";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 import { useScrolled } from "@/hooks/useScrolled";
@@ -125,7 +127,7 @@ export function Navbar({ navigation, socialLinks, uiLabels }: NavbarProps) {
               </a>
             ) : null,
           )}
-          <Button href="/cv" variant="primary" className="ml-1">
+          <Button href={withBasePath(CV_PATH)} download={CV_FILENAME} variant="primary" className="ml-1">
             {navigation.downloadCvLabel}
           </Button>
         </div>
@@ -196,7 +198,8 @@ export function Navbar({ navigation, socialLinks, uiLabels }: NavbarProps) {
 
             <motion.div variants={item} className="px-6 pt-4">
               <Button
-                href="/cv"
+                href={withBasePath(CV_PATH)}
+                download={CV_FILENAME}
                 variant="primary"
                 className="w-full"
                 onClick={() => setMenuOpen(false)}

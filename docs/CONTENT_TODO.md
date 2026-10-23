@@ -38,8 +38,8 @@ All six projects have only a confirmed `title`/`slug`. For each, still needed:
 - `items` is empty. Add evidence-based bullets only (spec section 19 forbids exaggeration) — e.g. specific, real instances of mentoring, code review, architecture decisions, or performance work.
 
 ## `cv.json`
-- `education` is empty — add real entries or leave empty to omit the section.
-- `summary` is a generic paraphrase of the About copy; replace with real CV summary copy if desired.
+- Holds the CV-only copy: summary, skills, AI-engineering section, per-role
+  CV bullets (`experienceHighlights`, keyed by experience `id`), projects, and education.
 
 ## Site URL / SEO
 - `src/constants/site.ts` uses a placeholder domain (`https://niamatullah.dev`)
@@ -47,7 +47,8 @@ All six projects have only a confirmed `title`/`slug`. For each, still needed:
   `NEXT_PUBLIC_SITE_URL` environment variable to the real production domain
   once it's registered/deployed.
 
-## CV (`/cv`)
-- The downloadable CV PDF is generated on request from `personal.json` +
-  `experience.json` + `skills.json` + `cv.json` (see `src/lib/pdf/CVDocument.tsx`).
+## CV (`/Niamat_Ullah_Resume.pdf`)
+- The downloadable CV PDF is generated at build time from `personal.json` +
+  `experience.json` + `social-links.json` + `cv.json` (see `src/lib/pdf/CVDocument.tsx`).
+  Titles, dates and contact details come from the shared site content.
   Filling in those JSON files automatically updates the PDF — no separate file to maintain.
