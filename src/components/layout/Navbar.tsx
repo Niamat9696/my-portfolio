@@ -98,7 +98,7 @@ export function Navbar({ navigation, socialLinks, uiLabels }: NavbarProps) {
           className="flex items-center font-mono text-lg font-semibold text-foreground transition-transform duration-200 hover:scale-[1.03]"
         >
           <Image
-            src={navigation.brand}
+            src={withBasePath(navigation.brand)}
             alt="Niamat Ullah — Full-Stack Engineer"
             height={72}
             width={217}
@@ -185,7 +185,7 @@ export function Navbar({ navigation, socialLinks, uiLabels }: NavbarProps) {
             >
               <span className="font-mono text-lg font-semibold text-foreground">
                 <Image
-                  src={navigation.brand}
+                  src={withBasePath(navigation.brand)}
                   alt="Niamat Ullah — Full-Stack Engineer"
                   height={72}
                   width={217}

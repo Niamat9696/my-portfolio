@@ -120,7 +120,7 @@
         "height": 915
       },
       "images": [],
-      "technologies": ["WEB3.JS","NodeJs","React.js","MongoDB","Tailwindcss","Tailwindcss","S3","VPS","Nginx"],
+      "technologies": ["WEB3.JS","NodeJs","React.js","MongoDB","Tailwindcss","S3","VPS","Nginx"],
       "problem": "Decentralized exchanges can be difficult for new users because they combine unfamiliar wallet interactions, token selection, exchange values, and blockchain transaction states. Mettaswap required a frontend that could simplify this technical workflow while preserving the speed, transparency, and control expected from a decentralized application.",
       "solution": "I developed a responsive and interaction-focused frontend that transforms the token-swapping process into a clear sequence of actions. The interface organizes token selection, amount entry, exchange information, wallet-related actions, validation feedback, and transaction states into a cohesive experience designed for both desktop and mobile users.",
       "architecture": "The frontend follows a component-based dApp architecture with reusable elements for token selectors, amount inputs, swap controls, wallet actions, transaction summaries, loading states, validation messages, and responsive layouts. Application state is organized around the active tokens, entered amounts, wallet status, and transaction lifecycle to keep the interface synchronized with user actions.",
