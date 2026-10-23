@@ -1,7 +1,8 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type MouseEvent } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { AnimatePresence, motion, type Variants } from "motion/react";
 import { Button } from "@/components/ui/Button";
@@ -34,8 +35,28 @@ const itemVariants: Variants = {
 const noopMenuVariants: Variants = { hidden: { opacity: 1 }, visible: { opacity: 1 } };
 const noopItemVariants: Variants = { hidden: { opacity: 1, y: 0 }, visible: { opacity: 1, y: 0 } };
 
+/**
+ * On the home page, scroll to the section ourselves. With a basePath (GitHub
+ * Pages serves the site from `/my-portfolio/`), `<Link href="/#about">` resolves
+ * to `/my-portfolio#about`, which Next.js treats as a different route than the
+ * current `/my-portfolio/` — it updates the URL but never scrolls.
+ * On other pages the Link navigates home and Next.js scrolls to the hash.
+ */
+function scrollToSection(event: MouseEvent<HTMLAnchorElement>, hash: string, onHomePage: boolean) {
+  if (!onHomePage || event.metaKey || event.ctrlKey || event.shiftKey || event.button !== 0) return;
+  const target = document.getElementById(hash.replace("#", ""));
+  if (!target) return;
+
+  event.preventDefault();
+  // Uses the CSS `scroll-behavior` (smooth, or instant under reduced motion)
+  // and honours each section's `scroll-margin-top` for the fixed header.
+  target.scrollIntoView();
+  window.history.pushState(null, "", hash);
+}
+
 export function Navbar({ navigation, socialLinks, uiLabels }: NavbarProps) {
   const scrolled = useScrolled();
+  const onHomePage = usePathname() === "/";
   const [menuOpen, setMenuOpen] = useState(false);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
@@ -94,6 +115,7 @@ export function Navbar({ navigation, socialLinks, uiLabels }: NavbarProps) {
               <li key={link.href}>
                 <Link
                   href={`/${link.href}`}
+                  onClick={(event) => scrollToSection(event, link.href, onHomePage)}
                   aria-current={isActive ? "true" : undefined}
                   className={`relative text-sm transition-colors duration-200 after:absolute after:-bottom-1 after:left-0 after:h-px after:w-full after:origin-left after:scale-x-0 after:bg-linear-to-r after:from-violet after:via-primary after:to-accent after:transition-transform after:duration-200 hover:text-foreground hover:after:scale-x-100 ${
                     isActive
@@ -187,7 +209,10 @@ export function Navbar({ navigation, socialLinks, uiLabels }: NavbarProps) {
                 <motion.li key={link.href} variants={item}>
                   <Link
                     href={`/${link.href}`}
-                    onClick={() => setMenuOpen(false)}
+                    onClick={(event) => {
+                      setMenuOpen(false);
+                      scrollToSection(event, link.href, onHomePage);
+                    }}
                     className="block border-b border-white/7 py-4 text-xl font-medium text-foreground-secondary transition-colors duration-200 hover:text-foreground"
                   >
                     {link.label}
