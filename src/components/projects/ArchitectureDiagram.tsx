@@ -1,21 +1,37 @@
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, ArrowRight, Braces, Database, PanelsTopLeft, PlugZap, Server } from "lucide-react";
 
-const layers = ["Frontend", "API", "Services", "Database", "External Integrations"];
+const layers = [
+  { label: "Frontend", icon: PanelsTopLeft },
+  { label: "API", icon: Braces },
+  { label: "Services", icon: Server },
+  { label: "Database", icon: Database },
+  { label: "Integrations", icon: PlugZap },
+];
 
-/** Simple vertical architecture flow diagram matching the design system, per spec section 14. */
+/** Responsive system-flow summary matching the project case-study design language. */
 export function ArchitectureDiagram() {
   return (
-    <div className="flex flex-col items-center gap-2 rounded-xl border border-border bg-card p-8">
-      {layers.map((layer, index) => (
-        <div key={layer} className="flex flex-col items-center gap-2">
-          <div className="rounded-lg border border-border bg-background-secondary px-6 py-3 font-mono text-sm text-foreground">
-            {layer}
+    <div className="surface-grid overflow-hidden rounded-2xl border border-white/8 bg-background/45 p-4 sm:p-6">
+      <div className="flex flex-col items-stretch gap-2 lg:flex-row lg:items-center">
+        {layers.map(({ label, icon: Icon }, index) => (
+          <div key={label} className="contents">
+            <div className="flex min-h-20 flex-1 items-center gap-3 rounded-xl border border-primary/15 bg-card/90 px-4 py-3 shadow-[0_12px_35px_-28px_rgba(59,130,246,0.8)] lg:min-w-0 lg:flex-col lg:justify-center lg:gap-2 lg:text-center">
+              <span className="grid h-8 w-8 shrink-0 place-items-center rounded-lg border border-primary/15 bg-primary/[0.07] text-accent">
+                <Icon className="h-4 w-4" aria-hidden="true" />
+              </span>
+              <span className="font-mono text-[10px] uppercase tracking-[0.12em] text-foreground">
+                {label}
+              </span>
+            </div>
+            {index < layers.length - 1 && (
+              <>
+                <ArrowDown className="mx-auto h-4 w-4 text-primary/55 lg:hidden" aria-hidden="true" />
+                <ArrowRight className="hidden h-4 w-4 shrink-0 text-primary/55 lg:block" aria-hidden="true" />
+              </>
+            )}
           </div>
-          {index < layers.length - 1 && (
-            <ArrowDown className="h-4 w-4 text-foreground-secondary" aria-hidden="true" />
-          )}
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }

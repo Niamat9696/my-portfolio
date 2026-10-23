@@ -20,4 +20,12 @@ export interface UiLabels {
   solutionsLabel: string;
   resultsImpactLabel: string;
   technologyStackLabel: string;
+  caseStudyLabel: string;
+  statusLabel: string;
+  categoryLabel: string;
+  caseStudyNavigationLabel: string;
+  onThisPageLabel: string;
+  projectNavigationLabel: string;
+  previousProjectLabel: string;
+  nextProjectLabel: string;
 }

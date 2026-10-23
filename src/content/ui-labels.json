@@ -19,5 +19,13 @@
   "technicalChallengesLabel": "Technical Challenges",
   "solutionsLabel": "Solutions",
   "resultsImpactLabel": "Results / Impact",
-  "technologyStackLabel": "Technology Stack"
+  "technologyStackLabel": "Technology Stack",
+  "caseStudyLabel": "Project Case Study",
+  "statusLabel": "Status",
+  "categoryLabel": "Category",
+  "caseStudyNavigationLabel": "Case study sections",
+  "onThisPageLabel": "On this page",
+  "projectNavigationLabel": "Project case studies",
+  "previousProjectLabel": "Previous project",
+  "nextProjectLabel": "Next project"
 }

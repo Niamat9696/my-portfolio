@@ -11,13 +11,13 @@ export function Experience() {
   const uiLabels = getUiLabels();
 
   return (
-    <section id="experience" className="scroll-mt-24 py-24">
+    <section id="experience" className="scroll-mt-24 py-24 sm:py-32">
       <Container>
         <Reveal>
           <SectionHeading label={copy.sectionLabel} heading={copy.heading} />
         </Reveal>
 
-        <div className="relative mt-12 space-y-10 border-l border-border pl-8">
+        <div className="relative mt-14 space-y-8 before:absolute before:bottom-8 before:left-[9px] before:top-4 before:w-px before:bg-linear-to-b before:from-primary before:via-border before:to-transparent">
           {entries.map((entry, index) => {
             const dateRange = formatDateRange(
               entry.startDate,
@@ -27,32 +27,37 @@ export function Experience() {
             );
 
             return (
-              <Reveal key={entry.id} delay={index * 0.08} className="relative">
+              <Reveal key={entry.id} delay={index * 0.08} className="relative pl-10 sm:pl-14">
                 <span
-                  className="absolute -left-[2.31rem] top-1.5 h-3 w-3 rounded-full border-2 border-background bg-primary"
+                  className="absolute left-0 top-7 z-10 h-[19px] w-[19px] rounded-full border-[5px] border-background bg-primary shadow-[0_0_0_1px_rgba(59,130,246,0.35)]"
                   aria-hidden="true"
                 />
 
-                <h3 className="text-xl font-semibold text-foreground">{entry.position}</h3>
-                <p className="mt-1 text-foreground-secondary">{entry.company}</p>
-                {dateRange && (
-                  <p className="mt-1 font-mono text-xs text-foreground-secondary/70">
-                    {dateRange}
-                  </p>
-                )}
+                <article className="rounded-2xl border border-white/8 bg-card/45 p-5 transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/25 sm:p-7">
+                <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between sm:gap-6">
+                  <div>
+                    <h3 className="text-xl font-semibold tracking-tight text-foreground sm:text-2xl">{entry.position}</h3>
+                    <p className="mt-1 text-sm font-medium text-primary-light">{entry.company}</p>
+                  </div>
+                  {dateRange && (
+                    <p className="shrink-0 rounded-full border border-white/8 px-3 py-1.5 font-mono text-[10px] uppercase tracking-wider text-foreground-secondary">
+                      {dateRange}
+                    </p>
+                  )}
+                </div>
 
                 {entry.description && (
-                  <p className="mt-4 max-w-[65ch] text-base leading-relaxed text-foreground-secondary">
+                  <p className="mt-5 max-w-[70ch] text-base leading-7 text-foreground-secondary">
                     {entry.description}
                   </p>
                 )}
 
                 {entry.achievements.length > 0 && (
-                  <ul className="mt-4 space-y-2">
+                  <ul className="mt-5 grid gap-2.5 lg:grid-cols-2 lg:gap-x-8">
                     {entry.achievements.map((achievement) => (
                       <li
                         key={achievement}
-                        className="flex items-start gap-2 text-sm text-foreground-secondary"
+                        className="flex items-start gap-2.5 text-sm leading-6 text-foreground-secondary"
                       >
                         <span
                           className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-primary"
@@ -65,12 +70,13 @@ export function Experience() {
                 )}
 
                 {entry.technologies.length > 0 && (
-                  <div className="mt-4 flex flex-wrap gap-2">
+                  <div className="mt-6 flex flex-wrap gap-2 border-t border-white/7 pt-5">
                     {entry.technologies.map((tech) => (
                       <TechPill key={tech} label={tech} />
                     ))}
                   </div>
                 )}
+                </article>
               </Reveal>
             );
           })}

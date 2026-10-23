@@ -6,9 +6,9 @@ export default function NotFound() {
   const content = getNotFoundContent();
 
   return (
-    <div className="flex min-h-[70vh] items-center py-24">
+    <div className="surface-grid flex min-h-[75vh] items-center py-24">
       <Container className="text-center">
-        <p className="font-mono text-6xl font-semibold text-primary sm:text-7xl">
+        <p className="text-gradient-brand font-mono text-7xl font-semibold tracking-tighter sm:text-8xl">
           {content.title}
         </p>
         <p className="mt-4 text-lg text-foreground-secondary">{content.message}</p>

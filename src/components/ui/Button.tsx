@@ -4,16 +4,16 @@ import type { AnchorHTMLAttributes, ButtonHTMLAttributes, ReactNode } from "reac
 export type ButtonVariant = "primary" | "secondary" | "ghost" | "icon";
 
 const baseClasses =
-  "inline-flex items-center justify-center gap-2 rounded-lg font-medium " +
+  "inline-flex min-h-11 items-center justify-center gap-2 rounded-xl font-medium " +
   "transition-all duration-200 ease-out focus-visible:outline-none " +
   "focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 " +
   "focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-50";
 
 const variantClasses: Record<ButtonVariant, string> = {
   primary:
-    "bg-linear-to-r from-violet via-primary to-accent text-white px-5 py-2.5 text-sm bg-size-[200%_100%] bg-left hover:bg-right hover:-translate-y-px hover:shadow-lg hover:shadow-accent/25",
+    "border border-primary/70 bg-primary text-white px-5 py-2.5 text-sm hover:border-primary-light hover:bg-primary-light hover:-translate-y-px hover:shadow-[0_12px_30px_-12px_rgba(59,130,246,0.8)] active:translate-y-0",
   secondary:
-    "bg-transparent text-foreground px-5 py-2.5 text-sm border border-border hover:border-accent/60 hover:bg-white/[0.03] hover:-translate-y-px",
+    "bg-white/[0.025] text-foreground px-5 py-2.5 text-sm border border-white/12 hover:border-accent/45 hover:bg-white/[0.055] hover:-translate-y-px active:translate-y-0",
   ghost:
     "bg-transparent text-foreground-secondary px-3 py-2 text-sm hover:text-foreground hover:bg-white/[0.03]",
   icon: "bg-transparent text-foreground-secondary p-2 hover:text-foreground hover:bg-white/[0.03] hover:scale-105",

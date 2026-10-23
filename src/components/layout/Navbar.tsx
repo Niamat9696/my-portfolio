@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { AnimatePresence, motion, type Variants } from "motion/react";
@@ -35,6 +35,8 @@ const noopItemVariants: Variants = { hidden: { opacity: 1, y: 0 }, visible: { op
 export function Navbar({ navigation, socialLinks, uiLabels }: NavbarProps) {
   const scrolled = useScrolled();
   const [menuOpen, setMenuOpen] = useState(false);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
   const sectionIds = navigation.links.map((link) => link.href.replace("#", ""));
   const activeId = useActiveSection(sectionIds);
   const prefersReducedMotion = usePrefersReducedMotion();
@@ -44,7 +46,9 @@ export function Navbar({ navigation, socialLinks, uiLabels }: NavbarProps) {
   useEffect(() => {
     if (!menuOpen) return;
 
+    const menuButton = menuButtonRef.current;
     document.body.style.overflow = "hidden";
+    closeButtonRef.current?.focus();
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") setMenuOpen(false);
     };
@@ -53,6 +57,7 @@ export function Navbar({ navigation, socialLinks, uiLabels }: NavbarProps) {
     return () => {
       document.body.style.overflow = "";
       window.removeEventListener("keydown", handleKeyDown);
+      menuButton?.focus();
     };
   }, [menuOpen]);
 
@@ -60,11 +65,11 @@ export function Navbar({ navigation, socialLinks, uiLabels }: NavbarProps) {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "border-b border-border bg-background/80 backdrop-blur-md"
+          ? "border-b border-white/8 bg-background/82 shadow-[0_12px_35px_-28px_rgba(0,0,0,0.9)] backdrop-blur-xl"
           : "border-b border-transparent bg-transparent"
       }`}
     >
-      <nav className="mx-auto flex h-20 max-w-350 items-center justify-between px-4 sm:px-6 lg:px-8">
+      <nav className="mx-auto flex h-20 max-w-320 items-center justify-between px-5 sm:px-7 lg:px-8">
         <Link
           href="/"
           className="flex items-center font-mono text-lg font-semibold text-foreground transition-transform duration-200 hover:scale-[1.03]"
@@ -75,7 +80,7 @@ export function Navbar({ navigation, socialLinks, uiLabels }: NavbarProps) {
             height={72}
             width={217}
             priority
-            className="h-10 w-auto sm:h-14"
+            className="h-9 w-auto sm:h-11"
           />
         </Link>
 
@@ -126,12 +131,13 @@ export function Navbar({ navigation, socialLinks, uiLabels }: NavbarProps) {
         </div>
 
         <button
+          ref={menuButtonRef}
           type="button"
           onClick={() => setMenuOpen(true)}
           aria-label={uiLabels.openMenuLabel}
           aria-expanded={menuOpen}
           aria-controls="mobile-menu"
-          className="relative text-foreground transition-transform duration-200 hover:scale-110 hover:text-accent md:hidden"
+          className="relative grid h-11 w-11 place-items-center rounded-xl border border-white/10 text-foreground transition-all duration-200 hover:border-accent/40 hover:text-accent md:hidden"
         >
           <Menu className="h-6 w-6" aria-hidden="true" />
         </button>
@@ -147,7 +153,7 @@ export function Navbar({ navigation, socialLinks, uiLabels }: NavbarProps) {
             initial="hidden"
             animate="visible"
             exit="hidden"
-            className="fixed inset-0 z-50 bg-background md:hidden"
+            className="fixed inset-0 z-50 bg-background/98 backdrop-blur-xl md:hidden"
           >
             <motion.div
               variants={item}
@@ -164,22 +170,23 @@ export function Navbar({ navigation, socialLinks, uiLabels }: NavbarProps) {
                 />
               </span>
               <button
+                ref={closeButtonRef}
                 type="button"
                 onClick={() => setMenuOpen(false)}
                 aria-label={uiLabels.closeMenuLabel}
-                className="text-foreground transition-transform duration-200 hover:rotate-90 hover:text-accent"
+                className="grid h-11 w-11 place-items-center rounded-xl border border-white/10 text-foreground transition-all duration-200 hover:border-accent/40 hover:text-accent"
               >
                 <X className="h-6 w-6" aria-hidden="true" />
               </button>
             </motion.div>
 
-            <ul className="flex flex-col gap-1 px-6 pt-6">
+            <ul className="flex flex-col gap-1 px-6 pt-8">
               {navigation.links.map((link) => (
                 <motion.li key={link.href} variants={item}>
                   <Link
                     href={`/${link.href}`}
                     onClick={() => setMenuOpen(false)}
-                    className="block py-3 text-lg text-foreground-secondary transition-colors duration-200 hover:text-foreground"
+                    className="block border-b border-white/7 py-4 text-xl font-medium text-foreground-secondary transition-colors duration-200 hover:text-foreground"
                   >
                     {link.label}
                   </Link>

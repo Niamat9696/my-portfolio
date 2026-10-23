@@ -10,5 +10,8 @@ export function getExperienceSectionCopy(): ExperienceSectionContent {
 }
 
 export function getExperience(): ExperienceEntry[] {
-  return experienceSection.items;
+  return [...experienceSection.items].sort((a, b) => {
+    if (a.isCurrent !== b.isCurrent) return a.isCurrent ? -1 : 1;
+    return new Date(b.startDate).getTime() - new Date(a.startDate).getTime();
+  });
 }

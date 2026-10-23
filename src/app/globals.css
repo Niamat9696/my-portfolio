@@ -2,8 +2,8 @@
 
 :root {
   --color-bg: #090e17;
-  --color-bg-secondary: #0f172a;
-  --color-bg-card: #111c2e;
+  --color-bg-secondary: #0c1424;
+  --color-bg-card: #101b2d;
   --color-blue: #3b82f6;
   --color-blue-light: #60a5fa;
   --color-cyan: #22d3ee;
@@ -47,6 +47,29 @@ body {
   background: var(--color-bg);
   color: var(--color-text);
   font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+}
+
+body::before {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  content: "";
+  background:
+    radial-gradient(circle at 16% 8%, rgb(59 130 246 / 0.1), transparent 25rem),
+    radial-gradient(circle at 86% 34%, rgb(34 211 238 / 0.06), transparent 24rem),
+    linear-gradient(180deg, #090e17 0%, #080d16 100%);
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-cyan);
+  outline-offset: 4px;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -70,10 +93,53 @@ body {
 }
 
 .text-gradient-brand {
-  background: linear-gradient(90deg, var(--color-violet), var(--color-blue), var(--color-cyan));
+  background: linear-gradient(100deg, #8b9cff 0%, var(--color-blue-light) 45%, var(--color-cyan) 100%);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+}
+
+.surface-grid {
+  background-image:
+    linear-gradient(rgb(148 163 184 / 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(148 163 184 / 0.055) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.section-shell {
+  position: relative;
+  isolation: isolate;
+}
+
+.section-shell::before {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  content: "";
+  pointer-events: none;
+  background: linear-gradient(180deg, transparent, rgb(15 23 42 / 0.42), transparent);
+}
+
+.hairline-gradient {
+  background: linear-gradient(90deg, transparent, rgb(59 130 246 / 0.45), rgb(34 211 238 / 0.2), transparent);
+}
+
+@keyframes signal-pulse {
+  0%, 100% { opacity: 0.45; transform: scale(0.92); }
+  50% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes drift {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(0, -10px, 0); }
+}
+
+.animate-signal {
+  animation: signal-pulse 3s ease-in-out infinite;
+}
+
+.animate-drift {
+  animation: drift 7s ease-in-out infinite;
 }
 
 html {

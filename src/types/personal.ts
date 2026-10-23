@@ -3,6 +3,7 @@ export interface PersonalInfo {
   title: string;
   location: string | null;
   email: string | null;
+  phone: string | null;
   yearsOfExperience: number;
   /**
    * `null` means the availability indicator is not configured and must be

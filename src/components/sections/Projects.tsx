@@ -10,17 +10,17 @@ export function Projects() {
   const uiLabels = getUiLabels();
 
   return (
-    <section id="projects" className="scroll-mt-24 py-24">
+    <section id="projects" className="section-shell scroll-mt-24 border-y border-white/6 py-24 sm:py-32">
       <Container>
         <Reveal>
           <SectionHeading label={copy.sectionLabel} heading={copy.heading} />
         </Reveal>
       </Container>
 
-      <div className="mt-8 divide-y divide-border">
+      <div className="mt-10 space-y-6 sm:mt-14 sm:space-y-10">
         {projects.map((project, index) => (
-          <Reveal key={project.slug}>
-            <ProjectCard project={project} reverse={index % 2 === 1} uiLabels={uiLabels} />
+          <Reveal key={project.slug} delay={0.04}>
+            <ProjectCard project={project} reverse={index % 2 === 1} index={index} uiLabels={uiLabels} />
           </Reveal>
         ))}
       </div>

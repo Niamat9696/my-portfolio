@@ -3,32 +3,18 @@
   "heading": "Experience",
   "items": [
     {
-      "id": "uzair-technology",
-      "company": "Uzair Technology",
-      "position": "Full Stack Developer",
-      "startDate": "02/21/2021",
-      "endDate": "07/31/2024",
-      "isCurrent": false,
-      "description": "Started my career here as a Backend Developer, progressing to Team Lead and later Director as I took on greater technical and organizational responsibility.",
+      "id": "value-growth-advisory",
+      "company": "Value & Growth Advisory",
+      "position": "Senior Full Stack Developer",
+      "startDate": "04/01/2026",
+      "endDate": null,
+      "isCurrent": true,
+      "description": "Working onsite as a Senior Full Stack Developer, building and maintaining enterprise-grade applications end to end.",
       "achievements": [
-        "Progressed from Developer to Backend Team Lead, and ultimately to Director",
-        "Successfully delivered 6+ projects from planning through deployment"
+        "Delivered a complete ERP system from architecture to deployment",
+        "Built a tutor application featuring 7 distinct dashboards"
       ],
-      "technologies": ["Node.js (Express)", "Laravel", "Tailwind CSS", "MongoDB", "JWT"]
-    },
-    {
-      "id": "grace-technology",
-      "company": "Grace Technology",
-      "position": "Full Stack Developer",
-      "startDate": "08/15/2024",
-      "endDate": "04/30/2025",
-      "isCurrent": false,
-      "description": "Joined as a Backend Developer and was promoted to lead the Web Department, seeking greater challenges and broader technical exposure.",
-      "achievements": [
-        "Promoted from Backend Developer to Team Lead of the Web Department",
-        "Delivered 3 projects across the full development lifecycle"
-      ],
-      "technologies": ["Node.js (Express)", "Laravel", "React.js", "AWS", "MongoDB", "MySQL", "JWT"]
+      "technologies": ["Node.js (NestJS)", "React.js", "AWS", "PostgreSQL", "Nginx", "VPS"]
     },
     {
       "id": "1-sol-digital-services",
@@ -46,18 +32,32 @@
       "technologies": ["Node.js (Express)", "Next.js","React.js", "AWS", "PostgreSQL", "LLM Integration"]
     },
     {
-      "id": "value-growth-advisory",
-      "company": "Value & Growth Advisory",
-      "position": "Senior Full Stack Developer",
-      "startDate": "04/01/2026",
-      "endDate": null,
-      "isCurrent": true,
-      "description": "Working onsite as a Senior Full Stack Developer, building and maintaining enterprise-grade applications end to end.",
+      "id": "grace-technology",
+      "company": "Grace Technology",
+      "position": "Full Stack Developer",
+      "startDate": "08/15/2024",
+      "endDate": "04/30/2025",
+      "isCurrent": false,
+      "description": "Joined as a Backend Developer and was promoted to lead the Web Department, seeking greater challenges and broader technical exposure.",
       "achievements": [
-        "Delivered a complete ERP system from architecture to deployment",
-        "Built a tutor application featuring 7 distinct dashboards"
+        "Promoted from Backend Developer to Team Lead of the Web Department",
+        "Delivered 3 projects across the full development lifecycle"
       ],
-      "technologies": ["Node.js (NestJS)", "React.js", "AWS", "PostgreSQL", "Nginx", "VPS"]
+      "technologies": ["Node.js (Express)", "Laravel", "React.js", "AWS", "MongoDB", "MySQL", "JWT"]
+    },
+    {
+      "id": "uzair-technology",
+      "company": "Uzair Technology",
+      "position": "Full Stack Developer",
+      "startDate": "02/21/2021",
+      "endDate": "07/31/2024",
+      "isCurrent": false,
+      "description": "Started my career here as a Backend Developer, progressing to Team Lead and later Director as I took on greater technical and organizational responsibility.",
+      "achievements": [
+        "Progressed from Developer to Backend Team Lead, and ultimately to Director",
+        "Successfully delivered 6+ projects from planning through deployment"
+      ],
+      "technologies": ["Node.js (Express)", "Laravel", "Tailwind CSS", "MongoDB", "JWT"]
     }
   ]
 }
