@@ -85,13 +85,20 @@ export function Navbar({ navigation, socialLinks, uiLabels }: NavbarProps) {
   }, [menuOpen]);
 
   return (
-    <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "border-b border-white/8 bg-background/82 shadow-[0_12px_35px_-28px_rgba(0,0,0,0.9)] backdrop-blur-xl"
-          : "border-b border-transparent bg-transparent"
-      }`}
-    >
+    <header className="fixed inset-x-0 top-0 z-50">
+      {/*
+        The scrolled background lives on its own layer: a backdrop-filter on the
+        <header> itself would become the containing block for the fixed mobile
+        menu, squeezing it into the 80px bar and leaving the rest see-through.
+      */}
+      <div
+        aria-hidden="true"
+        className={`pointer-events-none absolute inset-0 -z-10 transition-all duration-300 ${
+          scrolled
+            ? "border-b border-white/8 bg-background/82 shadow-[0_12px_35px_-28px_rgba(0,0,0,0.9)] backdrop-blur-xl"
+            : "border-b border-transparent bg-transparent"
+        }`}
+      />
       <nav className="mx-auto flex h-20 max-w-320 items-center justify-between px-5 sm:px-7 lg:px-8">
         <Link
           href="/"
