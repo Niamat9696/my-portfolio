@@ -29,7 +29,7 @@ export function About() {
             <div className="mt-9 grid gap-7 border-t border-white/8 pt-8 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
               {about.paragraphs.slice(1).map((paragraph, index) => (
                 <div key={paragraph}>
-                  <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-primary-light">
+                  <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-gradient-logo">
                     {index === 0 ? "Across the stack" : "Built for the long term"}
                   </p>
                   <p className="mt-3 max-w-[58ch] text-base leading-7 text-foreground-secondary">
@@ -54,13 +54,13 @@ export function About() {
           <Reveal delay={0.2} className="lg:pt-2">
             <div className="surface-grid relative overflow-hidden rounded-2xl border border-white/10 bg-card/75 p-6 shadow-[0_24px_80px_-48px_rgba(34,211,238,0.45)] sm:p-8">
               <div className="absolute right-0 top-0 h-24 w-24 bg-accent/5 blur-3xl" aria-hidden="true" />
-              <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-accent">
+              <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-gradient-logo">
                 {about.summaryPanel.title}
               </p>
               <ul className="mt-6">
                 {about.summaryPanel.items.map((focusItem, index) => (
                   <li key={focusItem} className="flex items-center gap-3 border-t border-white/8 py-3.5 text-sm text-foreground-secondary first:border-0 first:pt-0">
-                    <span className="font-mono text-[10px] text-primary">0{index + 1}</span>
+                    <span className="font-mono text-[10px] text-gradient-logo">0{index + 1}</span>
                     {focusItem}
                   </li>
                 ))}

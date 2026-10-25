@@ -70,7 +70,7 @@ function DetailBlock({ id, index, title, children, emphasis = false }: DetailBlo
       }`}
     >
       <div className="mb-5 flex items-center gap-3">
-        <span className="font-mono text-[10px] tracking-[0.18em] text-accent/80">
+        <span className="font-mono text-[10px] tracking-[0.18em] text-gradient-logo">
           {String(index).padStart(2, "0")}
         </span>
         <span className="h-px w-8 bg-primary/45" aria-hidden="true" />
@@ -161,7 +161,7 @@ export default async function ProjectCaseStudyPage({
           <div className="relative grid gap-10 lg:grid-cols-[minmax(0,1fr)_18rem] lg:items-end lg:gap-16">
             <div>
               <div className="flex flex-wrap items-center gap-3 font-mono text-[10px] uppercase tracking-[0.18em]">
-                <span className="text-accent">{uiLabels.caseStudyLabel}</span>
+                <span className="text-gradient-logo">{uiLabels.caseStudyLabel}</span>
                 {project.category && (
                   <>
                     <span className="h-1 w-1 rounded-full bg-foreground-secondary/45" aria-hidden="true" />

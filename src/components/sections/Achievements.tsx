@@ -23,7 +23,7 @@ export function Achievements() {
               delay={index * 0.06}
               className="bg-background p-6 transition-colors hover:bg-card/70 sm:p-8"
             >
-              <p className="font-mono text-[10px] text-primary">{String(index + 1).padStart(2, "0")}</p>
+              <p className="font-mono text-[10px] text-gradient-logo">{String(index + 1).padStart(2, "0")}</p>
               <h3 className="mt-4 text-lg font-semibold text-foreground">{achievement.title}</h3>
               <p className="mt-2 text-sm leading-6 text-foreground-secondary">
                 {achievement.description}

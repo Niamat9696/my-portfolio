@@ -37,7 +37,7 @@ export function Experience() {
                 <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between sm:gap-6">
                   <div>
                     <h3 className="text-xl font-semibold tracking-tight text-foreground sm:text-2xl">{entry.position}</h3>
-                    <p className="mt-1 text-sm font-medium text-primary-light">{entry.company}</p>
+                    <p className="mt-1 text-sm font-medium text-gradient-logo">{entry.company}</p>
                   </div>
                   {dateRange && (
                     <p className="shrink-0 rounded-full border border-white/8 px-3 py-1.5 font-mono text-[10px] uppercase tracking-wider text-foreground-secondary">

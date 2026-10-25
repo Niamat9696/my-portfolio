@@ -41,7 +41,7 @@ export function ProjectCard({ project, reverse, index, uiLabels }: ProjectCardPr
     <div className={`${reverse ? "lg:order-1" : "lg:order-2"} flex flex-col justify-center`}>
             <span className="mb-6 font-mono text-[10px] uppercase tracking-[0.18em] text-foreground-secondary/50">Featured / {String(index + 1).padStart(2, "0")}</span>
             {project.category && (
-              <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-accent">
+              <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-gradient-logo">
                 {project.category}
               </p>
             )}

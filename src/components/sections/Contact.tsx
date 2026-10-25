@@ -32,7 +32,7 @@ export function Contact({ contact, personal, socialLinks }: ContactProps) {
       <Container>
         <div className="surface-grid relative mx-auto max-w-5xl overflow-hidden rounded-[2rem] border border-white/10 bg-card/65 px-5 py-14 text-center shadow-[0_40px_100px_-55px_rgba(59,130,246,0.6)] sm:px-10 sm:py-20">
           <div className="absolute left-1/2 top-0 h-56 w-96 -translate-x-1/2 rounded-full bg-primary/10 blur-[90px]" aria-hidden="true" />
-          <p className="relative font-mono text-xs font-semibold uppercase tracking-[0.18em] text-accent">
+          <p className="relative font-mono text-xs font-semibold uppercase tracking-[0.18em] text-gradient-logo">
             {contact.sectionLabel}
           </p>
           <h2 className="relative mx-auto mt-4 max-w-3xl whitespace-pre-line text-[clamp(2.25rem,1.4rem+3.2vw,4.5rem)] font-semibold leading-[1.02] tracking-[-0.045em] text-foreground text-balance">

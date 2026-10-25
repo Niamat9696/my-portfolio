@@ -59,7 +59,7 @@ export function Hero({ hero, personal, socialLinks, uiLabels }: HeroProps) {
         </motion.div>
 
         <motion.div variants={child} className="mt-5 flex h-9 items-center gap-3 overflow-hidden sm:h-10">
-          <span className="font-mono text-sm text-primary" aria-hidden="true">{"//"}</span>
+          <span className="font-mono text-sm text-gradient-logo" aria-hidden="true">{"//"}</span>
           {prefersReducedMotion ? (
             <span className="text-gradient-brand font-mono text-base font-semibold sm:text-lg">
               {hero.rotatingWords[0]}
@@ -127,8 +127,8 @@ export function Hero({ hero, personal, socialLinks, uiLabels }: HeroProps) {
         </div>
 
         <motion.div variants={child} className="relative mx-auto hidden w-full max-w-md lg:block" aria-hidden="true">
-          <div className="animate-drift absolute -right-8 -top-8 rounded-xl border border-accent/15 bg-background/80 px-3 py-2 font-mono text-[10px] text-accent backdrop-blur">
-            production.ready()
+          <div className="animate-drift absolute -right-8 -top-8 rounded-xl border border-accent/15 bg-background/80 px-3 py-2 font-mono text-[10px] backdrop-blur">
+            <span className="text-gradient-logo">production.ready()</span>
           </div>
           <div className="surface-grid relative overflow-hidden rounded-[1.75rem] border border-white/10 bg-background-secondary/80 p-5 shadow-[0_40px_100px_-45px_rgba(59,130,246,0.55)] backdrop-blur-sm">
             <div className="flex items-center justify-between border-b border-white/8 pb-4">

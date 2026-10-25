@@ -16,6 +16,11 @@
 
   --font-sans: var(--font-inter);
   --font-mono: var(--font-jetbrains-mono);
+
+  /* Logo gradient (violet → blue → cyan). The text variant starts on a
+     lighter violet so small labels keep enough contrast on the dark bg. */
+  --gradient-logo: linear-gradient(100deg, #7c3aed 0%, #3b82f6 55%, #06b6d4 100%);
+  --gradient-logo-text: linear-gradient(100deg, #a78bfa 0%, #60a5fa 50%, #22d3ee 100%);
 }
 
 @theme inline {
@@ -92,11 +97,29 @@ button {
   color: var(--color-text);
 }
 
-.text-gradient-brand {
-  background: linear-gradient(100deg, #8b9cff 0%, var(--color-blue-light) 45%, var(--color-cyan) 100%);
+.text-gradient-brand,
+.text-gradient-logo {
+  background: var(--gradient-logo-text);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  /* Size the gradient to the text, not the full width of a block element. */
+  width: fit-content;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+/* Logo-gradient fill for primary buttons; the hover slides it toward cyan. */
+.bg-gradient-logo {
+  background-image: var(--gradient-logo);
+  background-size: 180% 100%;
+  background-position: 0% 50%;
+  transition-property: background-position, transform, box-shadow, border-color, scale;
+}
+
+.bg-gradient-logo:hover,
+.bg-gradient-logo:focus-visible {
+  background-position: 100% 50%;
 }
 
 .surface-grid {
