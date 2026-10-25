@@ -109,6 +109,19 @@ button {
   box-decoration-break: clone;
 }
 
+/* Logo gradient on line icons: strokes reference the <linearGradient
+   id="logo-gradient"> rendered once in the root layout. Put the class on the
+   icon itself or on a wrapper around it. */
+.icon-gradient,
+.icon-gradient svg {
+  stroke: url(#logo-gradient);
+}
+
+/* Logo-gradient fill for dots and hairlines. */
+.bg-gradient-logo-dot {
+  background-image: var(--gradient-logo-text);
+}
+
 /* Logo-gradient fill for primary buttons; the hover slides it toward cyan. */
 .bg-gradient-logo {
   background-image: var(--gradient-logo);

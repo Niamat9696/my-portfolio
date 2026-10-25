@@ -17,7 +17,7 @@ export function Experience() {
           <SectionHeading label={copy.sectionLabel} heading={copy.heading} />
         </Reveal>
 
-        <div className="relative mt-14 space-y-8 before:absolute before:bottom-8 before:left-[9px] before:top-4 before:w-px before:bg-linear-to-b before:from-primary before:via-border before:to-transparent">
+        <div className="relative mt-14 space-y-8 before:absolute before:bottom-8 before:left-[9px] before:top-4 before:w-px before:bg-linear-to-b before:from-violet before:via-primary/40 before:to-transparent">
           {entries.map((entry, index) => {
             const dateRange = formatDateRange(
               entry.startDate,
@@ -29,7 +29,7 @@ export function Experience() {
             return (
               <Reveal key={entry.id} delay={index * 0.08} className="relative pl-10 sm:pl-14">
                 <span
-                  className="absolute left-0 top-7 z-10 h-[19px] w-[19px] rounded-full border-[5px] border-background bg-primary shadow-[0_0_0_1px_rgba(59,130,246,0.35)]"
+                  className="absolute left-0 top-7 z-10 h-[19px] w-[19px] rounded-full border-[5px] border-background bg-gradient-logo-dot shadow-[0_0_0_1px_rgba(124,58,237,0.4)]"
                   aria-hidden="true"
                 />
 
@@ -60,7 +60,7 @@ export function Experience() {
                         className="flex items-start gap-2.5 text-sm leading-6 text-foreground-secondary"
                       >
                         <span
-                          className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-primary"
+                          className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-gradient-logo-dot"
                           aria-hidden="true"
                         />
                         {achievement}

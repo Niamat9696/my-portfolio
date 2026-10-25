@@ -73,7 +73,7 @@ function DetailBlock({ id, index, title, children, emphasis = false }: DetailBlo
         <span className="font-mono text-[10px] tracking-[0.18em] text-gradient-logo">
           {String(index).padStart(2, "0")}
         </span>
-        <span className="h-px w-8 bg-primary/45" aria-hidden="true" />
+        <span className="h-px w-8 bg-gradient-logo-dot opacity-60" aria-hidden="true" />
         <h2
           id={`${id}-title`}
           className="font-mono text-[11px] uppercase tracking-[0.18em] text-foreground"
@@ -94,7 +94,7 @@ function BulletList({ items }: { items: string[] }) {
       {items.map((item) => (
         <li key={item} className="flex items-start gap-3">
           <span
-            className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary shadow-[0_0_0_4px_rgba(59,130,246,0.08)]"
+            className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gradient-logo-dot shadow-[0_0_0_4px_rgba(124,58,237,0.1)]"
             aria-hidden="true"
           />
           <span>{item}</span>

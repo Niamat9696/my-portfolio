@@ -78,6 +78,17 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         >
           {uiLabels.skipToContentLabel}
         </a>
+        <svg aria-hidden="true" focusable="false" width="0" height="0" className="absolute">
+          {/* Shared logo gradient for icon strokes (see .icon-gradient). User-space
+              units over lucide's 24×24 viewBox so straight lines render too. */}
+          <defs>
+            <linearGradient id="logo-gradient" gradientUnits="userSpaceOnUse" x1="2" y1="4" x2="22" y2="20">
+              <stop offset="0%" stopColor="#a78bfa" />
+              <stop offset="50%" stopColor="#60a5fa" />
+              <stop offset="100%" stopColor="#22d3ee" />
+            </linearGradient>
+          </defs>
+        </svg>
         <BackgroundEffects />
         <Navbar navigation={navigation} socialLinks={socialLinks} uiLabels={uiLabels} />
         <main id="main-content" className="flex-1">

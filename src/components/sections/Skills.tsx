@@ -36,7 +36,7 @@ export function Skills() {
                 <h3 className="font-mono text-xs uppercase tracking-[0.14em] text-foreground">
                   {group.label}
                 </h3>
-                <span className="grid h-9 w-9 place-items-center rounded-lg border border-white/8 bg-white/[0.025] text-primary transition-colors group-hover:text-accent">
+                <span className="grid h-9 w-9 place-items-center rounded-lg border border-white/8 bg-white/[0.025] icon-gradient transition-[filter] group-hover:brightness-125">
                   <Icon className="h-4 w-4" aria-hidden="true" />
                 </span>
               </div>

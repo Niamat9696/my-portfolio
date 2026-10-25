@@ -62,7 +62,7 @@ export function DownloadCvButton({
         <AnimatePresence mode="popLayout" initial={false}>
           {started ? (
             <motion.span key="done" {...swap} transition={{ duration: 0.25, ease: "easeOut" }}>
-              <Check className="h-4 w-4 text-accent" />
+              <Check className="h-4 w-4 text-white" />
             </motion.span>
           ) : (
             <motion.span key="idle" {...swap} transition={{ duration: 0.25, ease: "easeOut" }}>

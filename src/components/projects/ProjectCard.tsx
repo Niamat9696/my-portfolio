@@ -79,11 +79,11 @@ export function ProjectCard({ project, reverse, index, uiLabels }: ProjectCardPr
             <div className="mt-6 flex flex-wrap items-center gap-5">
               <Link
                 href={`/projects/${project.slug}`}
-                className="group/link inline-flex items-center gap-1.5 text-sm font-medium text-primary transition-colors duration-200 hover:text-primary-light"
+                className="group/link inline-flex items-center gap-1.5 text-sm font-medium transition-[filter] duration-200 hover:brightness-125"
               >
-                {uiLabels.viewCaseStudyLabel}
+                <span className="text-gradient-logo">{uiLabels.viewCaseStudyLabel}</span>
                 <ArrowRight
-                  className="h-4 w-4 transition-transform duration-200 group-hover/link:translate-x-1"
+                  className="icon-gradient h-4 w-4 transition-transform duration-200 group-hover/link:translate-x-1"
                   aria-hidden="true"
                 />
               </Link>

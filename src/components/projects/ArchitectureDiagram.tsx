@@ -16,7 +16,7 @@ export function ArchitectureDiagram() {
         {layers.map(({ label, icon: Icon }, index) => (
           <div key={label} className="contents">
             <div className="flex min-h-20 flex-1 items-center gap-3 rounded-xl border border-primary/15 bg-card/90 px-4 py-3 shadow-[0_12px_35px_-28px_rgba(59,130,246,0.8)] lg:min-w-0 lg:flex-col lg:justify-center lg:gap-2 lg:text-center">
-              <span className="grid h-8 w-8 shrink-0 place-items-center rounded-lg border border-primary/15 bg-primary/[0.07] text-accent">
+              <span className="grid h-8 w-8 shrink-0 place-items-center rounded-lg border border-primary/15 bg-primary/[0.07] icon-gradient">
                 <Icon className="h-4 w-4" aria-hidden="true" />
               </span>
               <span className="font-mono text-[10px] uppercase tracking-[0.12em] text-foreground">
@@ -25,8 +25,8 @@ export function ArchitectureDiagram() {
             </div>
             {index < layers.length - 1 && (
               <>
-                <ArrowDown className="mx-auto h-4 w-4 text-primary/55 lg:hidden" aria-hidden="true" />
-                <ArrowRight className="hidden h-4 w-4 shrink-0 text-primary/55 lg:block" aria-hidden="true" />
+                <ArrowDown className="icon-gradient mx-auto h-4 w-4 opacity-60 lg:hidden" aria-hidden="true" />
+                <ArrowRight className="icon-gradient hidden h-4 w-4 shrink-0 opacity-60 lg:block" aria-hidden="true" />
               </>
             )}
           </div>

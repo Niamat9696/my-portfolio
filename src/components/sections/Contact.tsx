@@ -45,7 +45,7 @@ export function Contact({ contact, personal, socialLinks }: ContactProps) {
           <div className="relative mt-5 flex flex-wrap items-center justify-center gap-x-5 gap-y-3 text-sm text-foreground-secondary">
             {personal.location && (
               <span className="inline-flex items-center gap-2">
-                <MapPin className="h-4 w-4 text-primary" aria-hidden="true" />
+                <MapPin className="icon-gradient h-4 w-4" aria-hidden="true" />
                 {personal.location}
               </span>
             )}
@@ -55,7 +55,7 @@ export function Contact({ contact, personal, socialLinks }: ContactProps) {
                 aria-label={`Call Niamat Ullah at ${personal.phone}`}
                 className="inline-flex items-center gap-2 transition-colors duration-200 hover:text-foreground"
               >
-                <Phone className="h-4 w-4 text-primary" aria-hidden="true" />
+                <Phone className="icon-gradient h-4 w-4" aria-hidden="true" />
                 {personal.phone}
               </a>
             )}
