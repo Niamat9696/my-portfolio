@@ -48,7 +48,7 @@ export function Hero({ hero, personal, socialLinks, uiLabels }: HeroProps) {
       <motion.div className="grid items-center gap-14 lg:grid-cols-[1.12fr_0.88fr] lg:gap-16" variants={container} initial="hidden" animate="show">
         <div>
         <motion.div variants={child} className="flex items-center gap-3">
-          <span className="inline-flex h-2 w-2 rounded-full bg-gradient-logo-dot shadow-[0_0_0_5px_rgba(236,72,153,0.1)]" aria-hidden="true" />
+          <span className="inline-flex h-2 w-2 rounded-full bg-gradient-logo-dot shadow-[0_0_0_5px_rgba(124,58,237,0.1)]" aria-hidden="true" />
           <p className="font-mono text-xs uppercase tracking-[0.16em] text-foreground-secondary">{hero.greeting}</p>
         </motion.div>
 
@@ -144,7 +144,7 @@ export function Hero({ hero, personal, socialLinks, uiLabels }: HeroProps) {
                 <span className="font-mono text-xs text-foreground">Product Interface</span>
                 <Braces className="icon-gradient h-4 w-4" />
               </div>
-              <div className="mx-auto h-6 w-px bg-linear-to-b from-pink to-accent/60" />
+              <div className="mx-auto h-6 w-px bg-linear-to-b from-violet to-accent/60" />
               <div className="grid grid-cols-2 gap-3">
                 {['Secure APIs', 'Business Logic', 'Data Layer', 'Cloud Delivery'].map((label, index) => (
                   <div key={label} className="rounded-xl border border-white/9 bg-background/75 p-3.5">

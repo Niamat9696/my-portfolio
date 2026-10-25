@@ -96,7 +96,7 @@ export function CursorGlow() {
         className="absolute left-0 top-0 h-[560px] w-[560px] rounded-full opacity-0 mix-blend-screen transition-opacity duration-500"
         style={{
           background:
-            "radial-gradient(circle, rgb(59 130 246 / 0.14) 0%, rgb(236 72 153 / 0.07) 35%, transparent 68%)",
+            "radial-gradient(circle, rgb(59 130 246 / 0.14) 0%, rgb(124 58 237 / 0.08) 35%, transparent 68%)",
         }}
       />
       <div

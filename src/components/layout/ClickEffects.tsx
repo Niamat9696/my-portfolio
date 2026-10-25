@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 
 const CLICKABLE = "a, button, [role='button']";
-const SPARK_COLORS = ["#22d3ee", "#60a5fa", "#3b82f6", "#ec4899", "#f472b6"];
+const SPARK_COLORS = ["#22d3ee", "#60a5fa", "#3b82f6", "#818cf8", "#7c3aed", "#22d3ee", "#a78bfa", "#e879f9"];
 const SPARK_COUNT = 8;
 
 /**

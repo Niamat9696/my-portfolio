@@ -72,7 +72,7 @@ export function CaseStudyNav({ label, heading, sections }: CaseStudyNavProps) {
                 <motion.span
                   layoutId="case-study-nav-indicator"
                   aria-hidden="true"
-                  className="absolute -left-px inset-y-1 w-0.5 rounded-full bg-gradient-logo-dot shadow-[0_0_10px_rgba(236,72,153,0.55),0_0_14px_rgba(34,211,238,0.45)]"
+                  className="absolute -left-px inset-y-1 w-0.5 rounded-full bg-gradient-logo-dot shadow-[0_0_10px_rgba(124,58,237,0.55),0_0_14px_rgba(34,211,238,0.45)]"
                   transition={
                     prefersReducedMotion ? { duration: 0 } : { type: "spring", stiffness: 420, damping: 36 }
                   }
