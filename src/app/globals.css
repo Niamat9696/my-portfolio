@@ -9,6 +9,7 @@
   --color-cyan: #22d3ee;
   --color-violet: #7c3aed;
   --color-magenta: #d946ef;
+  --color-pink: #ec4899;
   --color-text: #f8fafc;
   --color-text-secondary: #94a3b8;
   --color-border: #1e293b;
@@ -17,10 +18,11 @@
   --font-sans: var(--font-inter);
   --font-mono: var(--font-jetbrains-mono);
 
-  /* Logo gradient (violet → blue → cyan). The text variant starts on a
-     lighter violet so small labels keep enough contrast on the dark bg. */
-  --gradient-logo: linear-gradient(100deg, #7c3aed 0%, #3b82f6 55%, #06b6d4 100%);
-  --gradient-logo-text: linear-gradient(100deg, #a78bfa 0%, #60a5fa 50%, #22d3ee 100%);
+  /* Logo gradient (pink → blue → sky blue). The button variant uses deeper
+     stops so white labels stay readable; the text variant uses lighter stops
+     so small labels keep enough contrast on the dark bg. */
+  --gradient-logo: linear-gradient(100deg, #db2777 0%, #3b82f6 55%, #06b6d4 100%);
+  --gradient-logo-text: linear-gradient(100deg, #f472b6 0%, #60a5fa 50%, #22d3ee 100%);
 }
 
 @theme inline {
@@ -32,6 +34,7 @@
   --color-accent: var(--color-cyan);
   --color-violet: var(--color-violet);
   --color-magenta: var(--color-magenta);
+  --color-pink: var(--color-pink);
   --color-foreground: var(--color-text);
   --color-foreground-secondary: var(--color-text-secondary);
   --color-border: var(--color-border);
@@ -125,7 +128,7 @@ button {
 /* Logo-gradient fill for primary buttons; the hover slides it toward cyan. */
 .bg-gradient-logo {
   background-image: var(--gradient-logo);
-  background-size: 180% 100%;
+  background-size: 135% 100%;
   background-position: 0% 50%;
   transition-property: background-position, transform, box-shadow, border-color, scale;
 }
@@ -193,12 +196,12 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, var(--color-violet), var(--color-blue), var(--color-cyan));
+  background: linear-gradient(180deg, var(--color-pink), var(--color-blue), var(--color-cyan));
   border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, var(--color-cyan), var(--color-blue), var(--color-magenta));
+  background: linear-gradient(180deg, var(--color-cyan), var(--color-blue), var(--color-pink));
 }
 
 /* Click feedback (see ClickEffects) */
@@ -208,7 +211,7 @@ html {
   height: 84px;
   border-radius: 9999px;
   border: 1.5px solid rgb(34 211 238 / 0.85);
-  box-shadow: 0 0 18px rgb(59 130 246 / 0.55), inset 0 0 12px rgb(124 58 237 / 0.35);
+  box-shadow: 0 0 18px rgb(59 130 246 / 0.55), inset 0 0 12px rgb(236 72 153 / 0.35);
   will-change: transform, opacity;
 }
 

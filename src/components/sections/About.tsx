@@ -19,7 +19,7 @@ export function About() {
           <Reveal delay={0.1} className="lg:pl-12">
             {about.paragraphs[0] && (
               <div className="relative border-l-2 border-primary pl-5 sm:pl-7">
-                <span className="absolute -left-[5px] top-0 h-2 w-2 rounded-full bg-gradient-logo-dot shadow-[0_0_0_5px_rgba(124,58,237,0.1)]" aria-hidden="true" />
+                <span className="absolute -left-[5px] top-0 h-2 w-2 rounded-full bg-gradient-logo-dot shadow-[0_0_0_5px_rgba(236,72,153,0.1)]" aria-hidden="true" />
                 <p className="max-w-[62ch] text-lg font-medium leading-8 text-foreground sm:text-xl sm:leading-9">
                   {about.paragraphs[0]}
                 </p>

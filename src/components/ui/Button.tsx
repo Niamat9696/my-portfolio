@@ -11,7 +11,7 @@ const baseClasses =
 
 const variantClasses: Record<ButtonVariant, string> = {
   primary:
-    "bg-gradient-logo border border-white/10 text-white px-5 py-2.5 text-sm hover:-translate-y-px hover:shadow-[0_12px_30px_-12px_rgba(124,58,237,0.75),0_8px_24px_-14px_rgba(34,211,238,0.7)] active:translate-y-0",
+    "bg-gradient-logo border border-white/10 text-white px-5 py-2.5 text-sm hover:-translate-y-px hover:shadow-[0_12px_30px_-12px_rgba(236,72,153,0.75),0_8px_24px_-14px_rgba(34,211,238,0.7)] active:translate-y-0",
   secondary:
     "bg-white/[0.025] text-foreground px-5 py-2.5 text-sm border border-white/12 hover:border-accent/45 hover:bg-white/[0.055] hover:-translate-y-px active:translate-y-0",
   ghost:

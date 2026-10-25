@@ -123,7 +123,7 @@ export function Navbar({ navigation, socialLinks, uiLabels }: NavbarProps) {
                   href={`/${link.href}`}
                   onClick={(event) => scrollToSection(event, link.href, onHomePage)}
                   aria-current={isActive ? "true" : undefined}
-                  className={`relative text-sm transition-colors duration-200 after:absolute after:-bottom-1 after:left-0 after:h-px after:w-full after:origin-left after:scale-x-0 after:bg-linear-to-r after:from-violet after:via-primary after:to-accent after:transition-transform after:duration-200 hover:text-foreground hover:after:scale-x-100 ${
+                  className={`relative text-sm transition-colors duration-200 after:absolute after:-bottom-1 after:left-0 after:h-px after:w-full after:origin-left after:scale-x-0 after:bg-linear-to-r after:from-pink after:via-primary after:to-accent after:transition-transform after:duration-200 hover:text-foreground hover:after:scale-x-100 ${
                     isActive ? "text-foreground" : "text-foreground-secondary"
                   }`}
                 >
@@ -132,7 +132,7 @@ export function Navbar({ navigation, socialLinks, uiLabels }: NavbarProps) {
                     <motion.span
                       layoutId="nav-active-indicator"
                       aria-hidden="true"
-                      className="absolute -bottom-1 left-0 h-px w-full bg-linear-to-r from-violet via-primary to-accent shadow-[0_0_10px_rgba(34,211,238,0.85)]"
+                      className="absolute -bottom-1 left-0 h-px w-full bg-linear-to-r from-pink via-primary to-accent shadow-[0_0_10px_rgba(34,211,238,0.85)]"
                       transition={
                         prefersReducedMotion
                           ? { duration: 0 }

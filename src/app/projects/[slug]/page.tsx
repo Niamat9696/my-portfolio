@@ -94,7 +94,7 @@ function BulletList({ items }: { items: string[] }) {
       {items.map((item) => (
         <li key={item} className="flex items-start gap-3">
           <span
-            className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gradient-logo-dot shadow-[0_0_0_4px_rgba(124,58,237,0.1)]"
+            className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gradient-logo-dot shadow-[0_0_0_4px_rgba(236,72,153,0.1)]"
             aria-hidden="true"
           />
           <span>{item}</span>
