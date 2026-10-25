@@ -4,7 +4,7 @@ import type { AnchorHTMLAttributes, ButtonHTMLAttributes, ReactNode } from "reac
 export type ButtonVariant = "primary" | "secondary" | "ghost" | "icon";
 
 const baseClasses =
-  "inline-flex min-h-11 items-center justify-center gap-2 rounded-xl font-medium " +
+  "inline-flex min-h-11 items-center justify-center gap-2 rounded-xl font-medium active:scale-[0.97] " +
   "transition-all duration-200 ease-out focus-visible:outline-none " +
   "focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 " +
   "focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-50";

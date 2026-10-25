@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
+import { CursorGlow } from "@/components/layout/CursorGlow";
+import { ClickEffects } from "@/components/layout/ClickEffects";
 import { Footer } from "@/components/layout/Footer";
 import { BackToTop } from "@/components/layout/BackToTop";
 import { BackgroundEffects } from "@/components/layout/BackgroundEffects";
@@ -83,6 +85,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         </main>
         <Footer />
         <BackToTop label={uiLabels.backToTopLabel} />
+        <CursorGlow />
+        <ClickEffects />
       </body>
     </html>
   );

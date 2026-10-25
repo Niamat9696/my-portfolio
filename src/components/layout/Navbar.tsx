@@ -5,10 +5,9 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { AnimatePresence, motion, type Variants } from "motion/react";
-import { Button } from "@/components/ui/Button";
+import { DownloadCvButton } from "@/components/ui/DownloadCvButton";
 import { SocialIcon } from "@/components/ui/SocialIcon";
 import { toGmailComposeUrl } from "@/lib/email";
-import { CV_FILENAME, CV_PATH } from "@/constants/site";
 import { withBasePath } from "@/lib/base-path";
 import { useActiveSection } from "@/hooks/useActiveSection";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
@@ -125,12 +124,22 @@ export function Navbar({ navigation, socialLinks, uiLabels }: NavbarProps) {
                   onClick={(event) => scrollToSection(event, link.href, onHomePage)}
                   aria-current={isActive ? "true" : undefined}
                   className={`relative text-sm transition-colors duration-200 after:absolute after:-bottom-1 after:left-0 after:h-px after:w-full after:origin-left after:scale-x-0 after:bg-linear-to-r after:from-violet after:via-primary after:to-accent after:transition-transform after:duration-200 hover:text-foreground hover:after:scale-x-100 ${
-                    isActive
-                      ? "text-foreground after:scale-x-100"
-                      : "text-foreground-secondary"
+                    isActive ? "text-foreground" : "text-foreground-secondary"
                   }`}
                 >
                   {link.label}
+                  {isActive && (
+                    <motion.span
+                      layoutId="nav-active-indicator"
+                      aria-hidden="true"
+                      className="absolute -bottom-1 left-0 h-px w-full bg-linear-to-r from-violet via-primary to-accent shadow-[0_0_10px_rgba(34,211,238,0.85)]"
+                      transition={
+                        prefersReducedMotion
+                          ? { duration: 0 }
+                          : { type: "spring", stiffness: 420, damping: 34 }
+                      }
+                    />
+                  )}
                 </Link>
               </li>
             );
@@ -156,9 +165,11 @@ export function Navbar({ navigation, socialLinks, uiLabels }: NavbarProps) {
               </a>
             ) : null,
           )}
-          <Button href={withBasePath(CV_PATH)} download={CV_FILENAME} variant="primary" className="ml-1">
-            {navigation.downloadCvLabel}
-          </Button>
+          <DownloadCvButton
+            label={navigation.downloadCvLabel}
+            startedLabel={navigation.downloadCvStartedLabel}
+            className="ml-1"
+          />
         </div>
 
         <button
@@ -229,15 +240,12 @@ export function Navbar({ navigation, socialLinks, uiLabels }: NavbarProps) {
             </ul>
 
             <motion.div variants={item} className="px-6 pt-4">
-              <Button
-                href={withBasePath(CV_PATH)}
-                download={CV_FILENAME}
-                variant="primary"
+              <DownloadCvButton
+                label={navigation.downloadCvLabel}
+                startedLabel={navigation.downloadCvStartedLabel}
                 className="w-full"
                 onClick={() => setMenuOpen(false)}
-              >
-                {navigation.downloadCvLabel}
-              </Button>
+              />
             </motion.div>
 
             <motion.div variants={item} className="flex gap-4 px-6 pt-8">

@@ -2,9 +2,7 @@ import { getAbout, getNavigation } from "@/lib/content";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
-import { Button } from "@/components/ui/Button";
-import { CV_FILENAME, CV_PATH } from "@/constants/site";
-import { withBasePath } from "@/lib/base-path";
+import { DownloadCvButton } from "@/components/ui/DownloadCvButton";
 
 export function About() {
   const about = getAbout();
@@ -42,9 +40,11 @@ export function About() {
             </div>
 
             <div className="mt-9 flex items-center gap-4">
-              <Button href={withBasePath(CV_PATH)} download={CV_FILENAME} variant="secondary">
-                {navigation.downloadCvLabel}
-              </Button>
+              <DownloadCvButton
+                label={navigation.downloadCvLabel}
+                startedLabel={navigation.downloadCvStartedLabel}
+                variant="secondary"
+              />
               <span className="hidden font-mono text-[10px] uppercase tracking-[0.14em] text-foreground-secondary/50 sm:inline">
                 Full experience &amp; skills
               </span>

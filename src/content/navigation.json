@@ -7,5 +7,6 @@
     { "label": "Skills", "href": "#skills" },
     { "label": "Contact", "href": "#contact" }
   ],
-  "downloadCvLabel": "Download CV"
+  "downloadCvLabel": "Download CV",
+  "downloadCvStartedLabel": "Downloading…"
 }

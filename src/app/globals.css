@@ -164,3 +164,62 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(180deg, var(--color-cyan), var(--color-blue), var(--color-magenta));
 }
+
+/* Click feedback (see ClickEffects) */
+.click-ring {
+  position: absolute;
+  width: 84px;
+  height: 84px;
+  border-radius: 9999px;
+  border: 1.5px solid rgb(34 211 238 / 0.85);
+  box-shadow: 0 0 18px rgb(59 130 246 / 0.55), inset 0 0 12px rgb(124 58 237 / 0.35);
+  will-change: transform, opacity;
+}
+
+.click-spark {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 9999px;
+  background: currentColor;
+  box-shadow: 0 0 8px currentColor;
+  will-change: transform, opacity;
+}
+
+/* Light sweep across a button on hover (see DownloadCvButton) */
+.btn-shine {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.btn-shine::after {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  content: "";
+  pointer-events: none;
+  background: linear-gradient(110deg, transparent 30%, rgb(255 255 255 / 0.28) 50%, transparent 70%);
+  transform: translateX(-120%);
+}
+
+.btn-shine:hover::after,
+.btn-shine:focus-visible::after {
+  transform: translateX(120%);
+  transition: transform 750ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes nudge-down {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(3px); }
+}
+
+.group:hover .animate-nudge-on-hover {
+  animation: nudge-down 0.9s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-shine::after {
+    display: none;
+  }
+}
