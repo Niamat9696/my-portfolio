@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight, Layers3, MoveUpRight } from "lucide-react";
+import { CaseStudyNav } from "@/components/projects/CaseStudyNav";
 import { ArchitectureDiagram } from "@/components/projects/ArchitectureDiagram";
 import { ProjectImagePlaceholder } from "@/components/projects/ProjectImagePlaceholder";
 import { GithubIcon } from "@/components/ui/BrandIcons";
@@ -275,26 +276,11 @@ export default async function ProjectCaseStudyPage({
 
         <div className="mt-16 grid gap-10 lg:grid-cols-[14rem_minmax(0,1fr)] lg:gap-14 xl:gap-20">
           <aside className="hidden lg:block">
-            <nav aria-label={uiLabels.caseStudyNavigationLabel} className="sticky top-28">
-              <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-foreground-secondary/60">
-                {uiLabels.onThisPageLabel}
-              </p>
-              <ol className="mt-5 space-y-1 border-l border-white/10">
-                {sections.map((section, index) => (
-                  <li key={section.id}>
-                    <a
-                      href={`#${section.id}`}
-                      className="group flex items-center gap-3 border-l border-transparent py-2 pl-4 text-sm text-foreground-secondary transition-colors duration-200 hover:border-primary hover:text-foreground"
-                    >
-                      <span className="font-mono text-[9px] text-foreground-secondary/45 group-hover:text-accent">
-                        {String(index + 1).padStart(2, "0")}
-                      </span>
-                      {section.label}
-                    </a>
-                  </li>
-                ))}
-              </ol>
-            </nav>
+            <CaseStudyNav
+              label={uiLabels.caseStudyNavigationLabel}
+              heading={uiLabels.onThisPageLabel}
+              sections={sections}
+            />
           </aside>
 
           <div className="space-y-5">
