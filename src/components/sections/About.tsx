@@ -1,4 +1,4 @@
-import { getAbout, getNavigation } from "@/lib/content";
+import { getAbout, getNavigation, getProcess } from "@/lib/content";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
@@ -7,6 +7,7 @@ import { DownloadCvButton } from "@/components/ui/DownloadCvButton";
 export function About() {
   const about = getAbout();
   const navigation = getNavigation();
+  const process = getProcess();
 
   return (
     <section id="about" className="scroll-mt-24 py-24 sm:py-32">
@@ -45,9 +46,6 @@ export function About() {
                 startedLabel={navigation.downloadCvStartedLabel}
                 variant="secondary"
               />
-              <span className="hidden font-mono text-[10px] uppercase tracking-[0.14em] text-foreground-secondary/50 sm:inline">
-                Full experience &amp; skills
-              </span>
             </div>
           </Reveal>
 
@@ -55,13 +53,16 @@ export function About() {
             <div className="surface-grid relative overflow-hidden rounded-2xl border border-white/10 bg-card/75 p-6 shadow-[0_24px_80px_-48px_rgba(34,211,238,0.45)] sm:p-8">
               <div className="absolute right-0 top-0 h-24 w-24 bg-accent/5 blur-3xl" aria-hidden="true" />
               <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-gradient-logo">
-                {about.summaryPanel.title}
+                How I work
               </p>
               <ul className="mt-6">
-                {about.summaryPanel.items.map((focusItem, index) => (
-                  <li key={focusItem} className="flex items-center gap-3 border-t border-white/8 py-3.5 text-sm text-foreground-secondary first:border-0 first:pt-0">
-                    <span className="font-mono text-[10px] text-gradient-logo">0{index + 1}</span>
-                    {focusItem}
+                {process.steps.map((step) => (
+                  <li key={step.number} className="flex items-start gap-4 border-t border-white/8 py-4 first:border-0 first:pt-0 last:pb-0">
+                    <span className="mt-0.5 font-mono text-[10px] text-gradient-logo">{step.number}</span>
+                    <div>
+                      <p className="text-sm font-semibold text-foreground">{step.title}</p>
+                      <p className="mt-1 text-sm leading-6 text-foreground-secondary">{step.description}</p>
+                    </div>
                   </li>
                 ))}
               </ul>

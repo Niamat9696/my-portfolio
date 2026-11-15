@@ -1,6 +1,6 @@
 {
-  "sectionLabel": "04 / Technical Arsenal",
-  "heading": "Technical Arsenal",
+  "sectionLabel": "04 / Skills",
+  "heading": "The tools I build with.",
   "groups": [
     {
       "id": "frontend",
@@ -22,6 +22,7 @@
         "Node.js",
         "NestJS",
         "Express.js",
+        "Laravel",
         "REST APIs",
         "WebSockets",
         "API Architecture"

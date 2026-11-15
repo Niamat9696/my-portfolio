@@ -1,11 +1,13 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { AnimatePresence, motion, type Variants } from "motion/react";
-import { ArrowDownRight, ArrowRight, Braces, Check, Mail } from "lucide-react";
+import { ArrowDownRight, ArrowRight, Mail } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { GithubIcon, LinkedinIcon } from "@/components/ui/BrandIcons";
+import { withBasePath } from "@/lib/base-path";
 import { toGmailComposeUrl } from "@/lib/email";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 import type { HeroContent, PersonalInfo, SocialLink, UiLabels } from "@/types";
@@ -126,45 +128,23 @@ export function Hero({ hero, personal, socialLinks, uiLabels }: HeroProps) {
         </motion.div>
         </div>
 
-        <motion.div variants={child} className="relative mx-auto hidden w-full max-w-md lg:block" aria-hidden="true">
-          <div className="animate-drift absolute -right-8 -top-8 rounded-xl border border-accent/15 bg-background/80 px-3 py-2 font-mono text-[10px] backdrop-blur">
-            <span className="text-gradient-logo">production.ready()</span>
-          </div>
-          <div className="surface-grid relative overflow-hidden rounded-[1.75rem] border border-white/10 bg-background-secondary/80 p-5 shadow-[0_40px_100px_-45px_rgba(59,130,246,0.55)] backdrop-blur-sm">
-            <div className="flex items-center justify-between border-b border-white/8 pb-4">
-              <div className="flex items-center gap-2">
-                <span className="h-2.5 w-2.5 rounded-full bg-[#ff6b6b]/80" />
-                <span className="h-2.5 w-2.5 rounded-full bg-[#ffd43b]/80" />
-                <span className="h-2.5 w-2.5 rounded-full bg-success/80" />
-              </div>
-              <span className="font-mono text-[10px] uppercase tracking-[0.16em] text-foreground-secondary">system.architecture</span>
+        <motion.div variants={child} className="relative mx-auto w-full max-w-xs sm:max-w-sm lg:max-w-md">
+          <div className="absolute -inset-6 rounded-[2.5rem] bg-primary/10 blur-3xl" aria-hidden="true" />
+          <div className="gradient-border relative aspect-4/5 overflow-hidden rounded-[1.75rem] bg-background-secondary shadow-[0_40px_100px_-45px_rgba(59,130,246,0.55)]">
+            <Image
+              src={withBasePath("/profile.webp")}
+              alt="Portrait of Niamat Ullah"
+              fill
+              priority
+              sizes="(min-width: 1024px) 28rem, (min-width: 640px) 24rem, 20rem"
+              className="object-cover"
+            />
+            <div className="absolute inset-x-0 bottom-0 bg-linear-to-t from-background via-background/70 to-transparent px-5 pb-5 pt-16">
+              <p className="text-lg font-semibold tracking-tight text-foreground">{personal.name}</p>
+              <p className="mt-0.5 font-mono text-[11px] uppercase tracking-[0.14em] text-gradient-logo">
+                Senior Full-Stack Developer
+              </p>
             </div>
-            <div className="relative mt-6 space-y-4">
-              <div className="mx-auto flex w-[78%] items-center justify-between rounded-xl border border-primary/25 bg-primary/[0.07] p-4">
-                <span className="font-mono text-xs text-foreground">Product Interface</span>
-                <Braces className="icon-gradient h-4 w-4" />
-              </div>
-              <div className="mx-auto h-6 w-px bg-linear-to-b from-violet to-accent/60" />
-              <div className="grid grid-cols-2 gap-3">
-                {['Secure APIs', 'Business Logic', 'Data Layer', 'Cloud Delivery'].map((label, index) => (
-                  <div key={label} className="rounded-xl border border-white/9 bg-background/75 p-3.5">
-                    <div className="flex items-center gap-2">
-                      <span className={`h-1.5 w-1.5 rounded-full ${index === 3 ? 'bg-accent' : 'bg-primary'}`} />
-                      <span className="font-mono text-[11px] text-foreground-secondary">{label}</span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <div className="mx-auto h-6 w-px bg-linear-to-b from-accent/50 to-accent" />
-              <div className="mx-auto flex w-[68%] items-center justify-center gap-2 rounded-full border border-success/20 bg-success/[0.06] px-4 py-2.5">
-                <Check className="h-3.5 w-3.5 text-success" />
-                <span className="font-mono text-[10px] uppercase tracking-wider text-foreground-secondary">Deployed &amp; monitored</span>
-              </div>
-            </div>
-          </div>
-          <div className="absolute -bottom-5 -left-8 rounded-xl border border-white/10 bg-card/90 px-4 py-3 shadow-xl backdrop-blur">
-            <p className="font-mono text-[9px] uppercase tracking-[0.18em] text-foreground-secondary">Lifecycle</p>
-            <p className="mt-1 text-xs font-medium text-foreground">Requirements → Production</p>
           </div>
         </motion.div>
       </motion.div>

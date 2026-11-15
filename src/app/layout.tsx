@@ -83,9 +83,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
               units over lucide's 24×24 viewBox so straight lines render too. */}
           <defs>
             <linearGradient id="logo-gradient" gradientUnits="userSpaceOnUse" x1="2" y1="4" x2="22" y2="20">
-              <stop offset="0%" stopColor="#a78bfa" />
-              <stop offset="30%" stopColor="#818cf8" />
-              <stop offset="62%" stopColor="#60a5fa" />
+              <stop offset="0%" stopColor="#818cf8" />
+              <stop offset="55%" stopColor="#60a5fa" />
               <stop offset="100%" stopColor="#22d3ee" />
             </linearGradient>
           </defs>

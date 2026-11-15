@@ -8,7 +8,7 @@ export function Credibility() {
   return (
     <section aria-label="Credibility highlights" className="relative border-y border-white/8 bg-background-secondary/35 py-8 backdrop-blur-sm">
       <Container>
-        <div className="grid grid-cols-2 gap-y-8 md:grid-cols-4">
+        <div className="grid max-w-md grid-cols-2 gap-y-8">
           {items.map((item, index) => (
             <Reveal key={item.label} delay={index * 0.08} className="relative px-3 text-left sm:px-5 md:not-last:border-r md:border-white/8">
               {item.value && (

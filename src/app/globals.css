@@ -18,22 +18,20 @@
   --font-sans: var(--font-inter);
   --font-mono: var(--font-jetbrains-mono);
 
-  /* Logo gradient, in the logo's proportions: violet/indigo into
-     blue and sky blue, with no pink. The button variant uses deeper
+  /* Logo gradient, in the logo's proportions: indigo into
+     blue and sky blue, with no pink or violet. The button variant uses deeper
      stops so white labels stay readable; the text variant uses lighter stops
      so small labels keep enough contrast on the dark bg. */
   --gradient-logo: linear-gradient(
     100deg,
-    #6d4be0 0%,
-    #4f46e5 30%,
-    #3b82f6 62%,
+    #4f46e5 0%,
+    #3b82f6 55%,
     #06b6d4 100%
   );
   --gradient-logo-text: linear-gradient(
     100deg,
-    #a78bfa 0%,
-    #818cf8 30%,
-    #60a5fa 62%,
+    #818cf8 0%,
+    #60a5fa 55%,
     #22d3ee 100%
   );
 }
@@ -214,7 +212,7 @@ html {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, var(--color-cyan), var(--color-blue), var(--color-violet));
+  background: linear-gradient(180deg, var(--color-cyan), var(--color-blue), var(--color-blue-light));
 }
 
 /* Click feedback (see ClickEffects) */

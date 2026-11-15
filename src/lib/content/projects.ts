@@ -17,6 +17,10 @@ export function getFeaturedProjects(): Project[] {
   return projectsSection.items.filter((project) => project.featured);
 }
 
+export function getOtherProjects(): Project[] {
+  return projectsSection.items.filter((project) => !project.featured);
+}
+
 export function getProjectBySlug(slug: string): Project | undefined {
   return projectsSection.items.find((project) => project.slug === slug);
 }
