@@ -18,23 +18,21 @@
   --font-sans: var(--font-inter);
   --font-mono: var(--font-jetbrains-mono);
 
-  /* Logo gradient, in the logo's proportions: a small pink accent, mostly
-     violet/indigo, then blue into sky blue. The button variant uses deeper
+  /* Logo gradient, in the logo's proportions: violet/indigo into
+     blue and sky blue, with no pink. The button variant uses deeper
      stops so white labels stay readable; the text variant uses lighter stops
      so small labels keep enough contrast on the dark bg. */
   --gradient-logo: linear-gradient(
     100deg,
-    #c026d3 0%,
-    #7c3aed 12%,
-    #4f46e5 34%,
+    #6d4be0 0%,
+    #4f46e5 30%,
     #3b82f6 62%,
     #06b6d4 100%
   );
   --gradient-logo-text: linear-gradient(
     100deg,
-    #e879f9 0%,
-    #a78bfa 12%,
-    #818cf8 34%,
+    #a78bfa 0%,
+    #818cf8 30%,
     #60a5fa 62%,
     #22d3ee 100%
   );
@@ -216,7 +214,7 @@ html {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, var(--color-cyan), var(--color-blue), var(--color-pink));
+  background: linear-gradient(180deg, var(--color-cyan), var(--color-blue), var(--color-violet));
 }
 
 /* Click feedback (see ClickEffects) */
@@ -276,4 +274,77 @@ html {
   .btn-shine::after {
     display: none;
   }
+}
+
+/* Tech-stack marquee: two rows scroll in opposite directions, pausing on hover.
+   The track holds the list twice, so -50% loops seamlessly. */
+@keyframes marquee-left {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes marquee-right {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+
+.marquee {
+  overflow: hidden;
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  gap: 0.75rem;
+  padding-block: 0.25rem;
+  animation: marquee-left 45s linear infinite;
+}
+
+.marquee-track.reverse {
+  animation-name: marquee-right;
+  animation-duration: 55s;
+}
+
+.marquee:hover .marquee-track,
+.marquee:focus-within .marquee-track {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none !important;
+    flex-wrap: wrap;
+    width: auto;
+  }
+
+  .marquee-track [aria-hidden="true"] {
+    display: none;
+  }
+}
+
+/* Gradient hairline border: wrap content in an element with this class. */
+.gradient-border {
+  position: relative;
+}
+
+.gradient-border::before {
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  content: "";
+  pointer-events: none;
+  border-radius: inherit;
+  background: var(--gradient-logo);
+  opacity: 0.35;
+  transition: opacity 300ms;
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.gradient-border:hover::before,
+.gradient-border:focus-within::before {
+  opacity: 0.9;
 }

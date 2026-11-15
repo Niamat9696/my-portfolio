@@ -19,10 +19,21 @@ interface ProjectCardProps {
 export function ProjectCard({ project, reverse, index, uiLabels }: ProjectCardProps) {
   const media = (
     <div
-      className={`relative aspect-16/10 overflow-hidden rounded-2xl border border-white/10 bg-background-secondary transition-all duration-300 group-hover:-translate-y-1 group-hover:border-primary/35 group-hover:shadow-[0_28px_70px_-35px_rgba(59,130,246,0.55)] ${
+      className={`overflow-hidden rounded-2xl border border-white/10 bg-background-secondary transition-all duration-300 group-hover:-translate-y-1 group-hover:border-primary/35 group-hover:shadow-[0_28px_70px_-35px_rgba(59,130,246,0.55)] ${
         reverse ? "lg:order-2" : "lg:order-1"
       }`}
     >
+      <div className="flex items-center gap-3 border-b border-white/8 bg-white/[0.03] px-4 py-2.5" aria-hidden="true">
+        <span className="flex gap-1.5">
+          <span className="h-2.5 w-2.5 rounded-full bg-white/15" />
+          <span className="h-2.5 w-2.5 rounded-full bg-white/15" />
+          <span className="h-2.5 w-2.5 rounded-full bg-white/15" />
+        </span>
+        <span className="h-5 flex-1 truncate rounded-md bg-white/[0.04] px-3 font-mono text-[10px] leading-5 text-foreground-secondary/70">
+          {project.slug}
+        </span>
+      </div>
+      <div className="relative aspect-16/10">
       {project.image ? (
         <Image
           src={withBasePath(project.image.src)}
@@ -34,12 +45,18 @@ export function ProjectCard({ project, reverse, index, uiLabels }: ProjectCardPr
       ) : (
         <ProjectImagePlaceholder title={project.title} />
       )}
+      </div>
     </div>
   );
 
   const info = (
     <div className={`${reverse ? "lg:order-1" : "lg:order-2"} flex flex-col justify-center`}>
-            <span className="mb-6 font-mono text-[10px] uppercase tracking-[0.18em] text-foreground-secondary/50">Featured / {String(index + 1).padStart(2, "0")}</span>
+            <span
+              className="mb-4 text-6xl font-semibold leading-none tracking-tighter text-gradient-logo opacity-80 sm:text-7xl"
+              aria-hidden="true"
+            >
+              {String(index + 1).padStart(2, "0")}
+            </span>
             {project.category && (
               <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-gradient-logo">
                 {project.category}
@@ -62,8 +79,10 @@ export function ProjectCard({ project, reverse, index, uiLabels }: ProjectCardPr
             )}
 
             {project.role && (
-              <p className="mt-4 text-sm text-foreground-secondary">
-                <span className="text-foreground">{uiLabels.roleLabel}: </span>
+              <p className="mt-5 border-l-2 border-primary/40 pl-4 text-sm leading-6 text-foreground-secondary">
+                <span className="block font-mono text-[10px] uppercase tracking-[0.18em] text-foreground-secondary/70">
+                  {uiLabels.roleLabel}
+                </span>
                 {project.role}
               </p>
             )}
@@ -79,11 +98,11 @@ export function ProjectCard({ project, reverse, index, uiLabels }: ProjectCardPr
             <div className="mt-6 flex flex-wrap items-center gap-5">
               <Link
                 href={`/projects/${project.slug}`}
-                className="group/link inline-flex items-center gap-1.5 text-sm font-medium transition-[filter] duration-200 hover:brightness-125"
+                className="group/link bg-gradient-logo inline-flex min-h-11 items-center gap-2 rounded-xl border border-white/10 px-5 text-sm font-medium text-white"
               >
-                <span className="text-gradient-logo">{uiLabels.viewCaseStudyLabel}</span>
+                {uiLabels.viewCaseStudyLabel}
                 <ArrowRight
-                  className="icon-gradient h-4 w-4 transition-transform duration-200 group-hover/link:translate-x-1"
+                  className="h-4 w-4 transition-transform duration-200 group-hover/link:translate-x-1"
                   aria-hidden="true"
                 />
               </Link>
@@ -118,7 +137,7 @@ export function ProjectCard({ project, reverse, index, uiLabels }: ProjectCardPr
   return (
     <article className="group">
       <Container>
-        <div className="grid items-center gap-8 rounded-[1.75rem] border border-white/8 bg-card/35 p-4 transition-colors duration-300 hover:border-white/13 sm:p-7 lg:grid-cols-[1.08fr_0.92fr] lg:gap-14 lg:p-9">
+        <div className="gradient-border grid items-center gap-8 rounded-[1.75rem] bg-card/45 p-4 sm:p-7 lg:grid-cols-[1.08fr_0.92fr] lg:gap-14 lg:p-9">
           {media}
           {info}
         </div>
